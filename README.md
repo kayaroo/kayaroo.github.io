@@ -1,5 +1,4 @@
 # CIS 114 Assignments
-Homework 2 
 <!DOCTYPE html>
 <html>
 	<head>
