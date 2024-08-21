@@ -1,3 +1,3 @@
 # CIS 114 Assignments
-<a href="#" class="button">Post comment (link)</a>
+<a href="#" class="button">Homework 2 (link)</a>
 
