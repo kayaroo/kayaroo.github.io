@@ -6,7 +6,7 @@
 	</head>
 	<body>
 	<h1>Homework 2</h1>
-	<p style="font-size: 20px">Homework 2 </p>
+	<p style="font-size: 20px">Coming soon... </p>
 	</body>
 </htm1>
 
@@ -18,7 +18,7 @@ Homework 3
 	</head>
 	<body>
 	<h1>Homework 3</h1>
-	<p style="font-size: 20px">Homework 3 </p>
+	<p style="font-size: 20px">Coming soon... </p>
 	</body>
 </htm1>
 
@@ -30,7 +30,7 @@ Homework 4
 	</head>
 	<body>
 	<h1>Homework 4</h1>
-	<p style="font-size: 20px">Homework 4 </p>
+	<p style="font-size: 20px">Coming soon...</p>
 	</body>
 </htm1>
 
@@ -42,7 +42,7 @@ Homework 5
 	</head>
 	<body>
 	<h1>Homework 5</h1>
-	<p style="font-size: 20px">Homework 5 </p>
+	<p style="font-size: 20px">Coming soon... </p>
 	</body>
 </htm1>
 
@@ -54,7 +54,7 @@ Homework 6
 	</head>
 	<body>
 	<h1>Homework 6</h1>
-	<p style="font-size: 20px">Homework 6 </p>
+	<p style="font-size: 20px">Coming soon... </p>
 	</body>
 </htm1>
 
@@ -66,7 +66,7 @@ Homework 7
 	</head>
 	<body>
 	<h1>Homework 7</h1>
-	<p style="font-size: 20px">Homework 7 </p>
+	<p style="font-size: 20px">Coming soon... </p>
 	</body>
 </htm1>
 
@@ -78,6 +78,6 @@ Homework 8
 	</head>
 	<body>
 	<h1>Homework 8</h1>
-	<p style="font-size: 20px">Homework 8 </p>
+	<p style="font-size: 20px">Coming soon... </p>
 	</body>
 </htm1>
