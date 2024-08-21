@@ -10,7 +10,7 @@
 	</body>
 </htm1>
 
-Homework 3
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -22,7 +22,7 @@ Homework 3
 	</body>
 </htm1>
 
-Homework 4
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -34,7 +34,7 @@ Homework 4
 	</body>
 </htm1>
 
-Homework 5
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -46,7 +46,7 @@ Homework 5
 	</body>
 </htm1>
 
-Homework 6
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -58,7 +58,7 @@ Homework 6
 	</body>
 </htm1>
 
-Homework 7
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -70,7 +70,7 @@ Homework 7
 	</body>
 </htm1>
 
-Homework 8 
+
 <!DOCTYPE html>
 <html>
 	<head>
