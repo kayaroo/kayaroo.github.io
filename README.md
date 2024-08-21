@@ -1,5 +1,15 @@
 # CIS 114 Assignments
-Homework 2
+Homework 2 
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Change font size in HTML</title>
+	</head>
+	<body>
+	<h1>Amit Thinks</h1>
+	<p style="font-size: 20px">Homework 2 </p>
+	</body>
+</htm1>
 
 Homework 3
 
