@@ -62,7 +62,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Change font size in HTML</title>
+		
 	</head>
 	<body>
 	<h1>Homework 7</h1>
