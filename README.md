@@ -1,6 +1,6 @@
 # CIS 114 Assignments
-<a href="#" class="button">Homework 2</a>
-https://github.com/kayaroo/kayaroo.github.io/blob/main/hw2.html
+<a href="#" class="button">Homework 2</a> https://github.com/kayaroo/kayaroo.github.io/blob/main/hw2.html
+
 <a href="#" class="button">Homework 3</a>
 
 <a href="#" class="button">Homework 4</a>
