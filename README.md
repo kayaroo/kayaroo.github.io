@@ -31,7 +31,31 @@
 
 
 
-<a href="#" class="button">Homework 3</a>
+<html>
+    <head>
+        <title>
+            Using button tag inside a tag
+        </title>
+        <style>
+            .GFG {
+                background-color: white;
+                border: 2px solid black;
+                color: blue;
+                padding: 5px, 10px; /* Corrected padding values */
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- Adding button inside the link tag -->
+       
+            <button class="GFG">
+                Homework 3
+            </button>
+        </a>
+    </body>
+</html>
 
 <a href="#" class="button">Homework 4</a>
 
