@@ -15,4 +15,26 @@
 
 <a href="#" class="button">Homework 8</a>
 
-.button { background-color: #1c87c9; border: none; color: white; padding: 20px 34px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; margin: 4px 2px; cursor: pointer; Border-radius: 0.5rem; }
+btn {
+
+Text-decoration: none; (removes default styling of the link. Underline etc.)
+
+Background-color: green; (obvious)
+
+Color: white; (text color)
+
+Margin: 1rem; (adding 1rem of space around the button in all directions)
+
+Padding 0.5rem 1rem; (Adding space between the text and the border) (first value is top and bottom. Second value is right and left)
+
+Border-radius: 0.5rem; (rounding the edges)
+
+}
+
+If you want it to do something when you hover over the button, you can add :hover to the class in css.
+
+btn:hover {
+
+Background-color: light-green;
+
+}
