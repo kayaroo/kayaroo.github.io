@@ -15,7 +15,7 @@
 
 <a href="#" class="button">Homework 8</a>
 
-<!DOCTYPE html>
+
 <html>
     <head>
         <title>
