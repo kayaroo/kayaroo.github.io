@@ -1,5 +1,6 @@
 # CIS 114 Assignments
-style=“background-color: blue;”
+<html><head><style>body{background:blue;}</style></head></html>
+
 <a href="https://github.com/kayaroo/kayaroo.github.io/blob/main/hw2.html">Homework 2</a>
 
 <a href="#" class="button">Homework 3</a>
