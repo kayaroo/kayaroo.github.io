@@ -15,6 +15,4 @@
 
 <a href="#" class="button">Homework 8</a>
 
-<Button component={https://github.com/kayaroo/kayaroo.github.io/blob/main/hw2.html}>
-  Homework 2
-</Button>
+.button { background-color: #1c87c9; border: none; color: white; padding: 20px 34px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; margin: 4px 2px; cursor: pointer; }
