@@ -1,5 +1,5 @@
 # CIS 114 Assignments
-<html><head><style>body{background:blue;}</style></head></html>
+<html><head><style>body{background:#faebd7;}</style></head></html>
 
 <a href="https://github.com/kayaroo/kayaroo.github.io/blob/main/hw2.html">Homework 2</a>
 
