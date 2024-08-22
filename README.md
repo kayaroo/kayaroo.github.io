@@ -15,6 +15,6 @@
 
 <a href="#" class="button">Homework 8</a>
 
-<Button component={NextLink}>
+<Button component={https://github.com/kayaroo/kayaroo.github.io/blob/main/hw2.html}>
   Homework 2
 </Button>
