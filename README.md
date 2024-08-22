@@ -15,9 +15,6 @@
 
 <a href="#" class="button">Homework 8</a>
 
-<a
-	href="https://github.com/kayaroo/kayaroo.github.io/blob/main/hw2.html"
-	class="button expanded"
->
-	Homework 2 (expanded)
-</a>
+<Button component={NextLink}>
+  Homework 2
+</Button>
