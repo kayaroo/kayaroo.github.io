@@ -15,4 +15,4 @@
 
 <a href="#" class="button">Homework 8</a>
 
-.button { background-color: #1c87c9; border: none; color: white; padding: 20px 34px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; margin: 4px 2px; cursor: pointer; }
+.button { background-color: #1c87c9; border: none; color: white; padding: 20px 34px; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; margin: 4px 2px; cursor: pointer; Border-radius: 0.5rem; }
