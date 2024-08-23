@@ -57,13 +57,132 @@
     </body>
 </html>
 
-<a href="#" class="button">Homework 4</a>
+<html>
+    <head>
+        <title>
+            Using button tag inside a tag
+        </title>
+        <style>
+            .GFG {
+                background-color: white;
+                border: 2px solid black;
+                color: blue;
+                padding: 5px, 10px; /* Corrected padding values */
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
 
-<a href="#" class="button">Homework 5</a>
+        <!-- Adding button inside the link tag -->
+       
+            <button class="GFG">
+                Homework 4
+            </button>
+        
+    </body>
+</html>
 
-<a href="#" class="button">Homework 6</a>
+<html>
+    <head>
+        <title>
+            Using button tag inside a tag
+        </title>
+        <style>
+            .GFG {
+                background-color: white;
+                border: 2px solid black;
+                color: blue;
+                padding: 5px, 10px; /* Corrected padding values */
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
 
-<a href="#" class="button">Homework 7</a>
+        <!-- Adding button inside the link tag -->
+       
+            <button class="GFG">
+                Homework 5
+            </button>
+        
+    </body>
+</html>
 
-<a href="#" class="button">Homework 8</a>
+<html>
+    <head>
+        <title>
+            Using button tag inside a tag
+        </title>
+        <style>
+            .GFG {
+                background-color: white;
+                border: 2px solid black;
+                color: blue;
+                padding: 5px, 10px; /* Corrected padding values */
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
 
+        <!-- Adding button inside the link tag -->
+       
+            <button class="GFG">
+                Homework 6
+            </button>
+        
+    </body>
+</html>
+
+<html>
+    <head>
+        <title>
+            Using button tag inside a tag
+        </title>
+        <style>
+            .GFG {
+                background-color: white;
+                border: 2px solid black;
+                color: blue;
+                padding: 5px, 10px; /* Corrected padding values */
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- Adding button inside the link tag -->
+       
+            <button class="GFG">
+                Homework 7
+            </button>
+        
+    </body>
+</html>
+
+<html>
+    <head>
+        <title>
+            Using button tag inside a tag
+        </title>
+        <style>
+            .GFG {
+                background-color: white;
+                border: 2px solid black;
+                color: blue;
+                padding: 5px, 10px; /* Corrected padding values */
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- Adding button inside the link tag -->
+       
+            <button class="GFG">
+                Homework 8
+            </button>
+        
+    </body>
+</html>
