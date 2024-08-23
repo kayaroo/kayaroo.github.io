@@ -2,7 +2,7 @@
 <html><head><style>body{background:#faebd7;}</style></head></html>
 
 <button><a href="https://kayaroo.github.io/hw2.html">
-            Homework 2
+            Homework 2</button>
 
 
 <html>
