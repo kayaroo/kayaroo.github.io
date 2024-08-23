@@ -20,7 +20,7 @@
     <body>
 
         <!-- Adding button inside the link tag -->
-        <a href="hw2.html">
+        <a href="https://github.com/kayaroo/kayaroo.github.io/blob/main/hw2.html">
             <button class="GFG">
                 Homework 2
             </button>
