@@ -7,7 +7,6 @@
   </style>
 </head>
 <body>
-  <h1>Homework 2</h1>
   <form>
     <a href="https://kayaroo.github.io/hw2.html">Homework 2 </a>
 <a href= "">  Homework 3</a>    
