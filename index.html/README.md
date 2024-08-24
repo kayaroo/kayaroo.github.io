@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en-US">
 <title>CIS 114 Assignments</title>
 <body style= "background-color:#faebd7;">
