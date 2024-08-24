@@ -1,5 +1,4 @@
 # CIS 114 Assignments
-<!DOCTYPE html>
 <html lang="en-US">
 <head>
   <title>CIS 114 Assignments</title>
