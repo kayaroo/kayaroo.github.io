@@ -1,5 +1,5 @@
-<!DOCTYPE html>
 <html lang="en-US">
+<!DOCTYPE html>
 <title>CIS 114 Assignments</title>
 <body style= "background-color:#faebd7;">
 <h1>CIS 114 Assignments</h1>
