@@ -24,14 +24,25 @@
 <p>Product: <br>
 <span id = "Product"></span>
 <input type="button" onClick="multiplyBy()" Value="Multiply" />
-function multiplyBy() {
-num1 = document.getElementById("firstNumber").value;
-num2 = document.getElementById("secondNumber").value;
 <p>Minimum: <br>
 <span id = "Minimum"></span>
 <p>Maximum: <br>
 <span id = "Maximum"></span>
 <button onclick="run()">Run</button>
+function multiplyBy()
+{
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+        document.getElementById("result").innerHTML = num1 * num2;
+}
+
+function divideBy() 
+{ 
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+document.getElementById("result").innerHTML = num1 / num2;
+}
+
 <form>
     <a href="https://kayaroo.github.io/hw2p1.html">Part 1</a>
 </form>
