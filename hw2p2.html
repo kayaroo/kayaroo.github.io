@@ -8,19 +8,16 @@
 </head>
 <body>
   <h1>Homework 2 Part 2</h1>
-Private Sub Command1_Click()
-Dim a, b, c As Integer
-a = Val(Text1.Text)
-b = Val(Text2.Text)
-c = Val(Text3.Text)
-If a = b Then
-    Label4 = "Odd Number = " & c
-ElseIf a = c Then
-    Label4 = "Odd Number = " & b
-Else
-    Label4 = "Odd Number = " & a
-End If
-End Sub
+<label for="min">Min</label>
+<input type="number" id="min" name="min">
+<br>
+<label for="max">Max</label>
+<input type="number" id="max" name="max">
+<br>
+<label for="mul">Mul</label>
+<input type="number" id="mul" name="mul">
+<br>
+<button onclick="validate()">Validate</button>
 <form>
     <a href="https://kayaroo.github.io/hw2p1.html">Part 1</a>
 </form>
