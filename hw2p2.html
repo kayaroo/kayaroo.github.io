@@ -8,18 +8,22 @@
 </head>
 <body>
   <h1>Homework 2 Part 2</h1>
-<stdio.h>Dim a, b, c As Integer
-a = Val(Text1.Text)
-b = Val(Text2.Text)
-c = Val(Text3.Text)
-If a > b And a > c Then
-    Label4 = "Largest Number = " & a
-ElseIf b > c Then
-    Label4 = "Largest Number = " & b
-Else
-    Label4 = "Largest Number = " & c
-End If
-End Sub</stdio.h>
+<stdio.h>int main() {
+    int num1, num2, num3, largest;
+    
+    scanf("%d %d %d", &num1, &num2, &num3);
+    if (num1 > num2 && num1 > num3) {
+        largest = num1;
+    }
+    if (num2 > num1 && num2 > num3) {
+        largest = num2;
+    }
+    if (num3 > num1 && num3 > num2) {
+        largest = num3;
+    }
+    printf("The largest of the three numbers is %d\n", largest);
+    return 0;
+}</stdio.h>
    <form>
     <a href="https://kayaroo.github.io/hw2p1.html">Part 1</a>
   </form>
