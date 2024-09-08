@@ -8,33 +8,27 @@
 </head>
 <body>
   <h1>Homework 2 Part 2</h1>
-  <form>
- <script type="text/javascript">function doMath() {
-  var numOne = document.getElementById('num1').value;
-  var numTwo = document.getElementById('num2').value;
-  var numThree = document.getElementById('num3').value;
-  var theProduct = parseInt(numOne) * parseInt(numTwo)*parseInt(numThree);
-  alert(a*b*c);
-  alert(a+b+c);
-  alert((a+b+c)/3);
-  alert(Number.MIN_VALUE);
-  alert(Number.MAX_VALUE);
-  document.write(theProduct);</script> 
-        First Number<br>
-        <input id="num1" type="text" name="num1">
+  <div class="main">
+    First Number: <br>
+    <input type= "text" id= "firstNo" name="first">
+    <br><br> Second Number: <br>
     <br>
-        Second Number:<br>
-        <input id="num2" type="text" name="num2">
-        <br><be>
-        Third Number:<br>
-        <input id="num3" type="text" name="num3">
-        <br><br>
-        Answer:<br>
-        <output id="answer" type="text" name="Answer">
-        <br><br>
-      <input type="button" value="Product" onclick="Product"(); alert(a*b*c);" />
-    </form>
-
+    <input type= "text" id= "secondNo" name="second">
+    <br><br> Third Number:<br>
+     <input type= "text" id= "thirdNo" name="third">
+    <br><br>Product: <br>
+    <input type="button" id= "result" name="multiplication" value="calculate" oneclick= 
+      "multiply_number()">
+</div>
+  <script>
+    function multiply_number() {
+      Let a= document.getElementbyId("firstNo").value;
+      Let b= document.getElementbyId("secondNo").value;
+      Let c= document.getElementbyId("thirdNo").value;
+      Let product= a * b * c;
+      document.getElementbyId("result").value=product;
+    }
+  </script>
 <form>
     <a href="https://kayaroo.github.io/hw2p1.html">Part 1</a>
 </form>
