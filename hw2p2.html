@@ -8,8 +8,19 @@
 </head>
 <body>
   <h1>Homework 2 Part 2</h1>
-var quarters = promptNum("What is the sum of the three numbers?")
-val firstNumber = userInput.nextLine().toInt()
+Private Sub Command1_Click()
+Dim a, b, c As Integer
+a = Val(Text1.Text)
+b = Val(Text2.Text)
+c = Val(Text3.Text)
+If a = b Then
+    Label4 = "Odd Number = " & c
+ElseIf a = c Then
+    Label4 = "Odd Number = " & b
+Else
+    Label4 = "Odd Number = " & a
+End If
+End Sub
 <form>
     <a href="https://kayaroo.github.io/hw2p1.html">Part 1</a>
 </form>
