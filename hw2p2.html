@@ -8,9 +8,9 @@
 </head>
 <body>
   <h1>Homework 2 Part 2</h1>
-import java.util.Scanner;
 
-// exercise 2.17
+  import java.util.Scanner;
+
 public class ArithmeticSmallestLargest {
 
     public static void main(String[] args) {
@@ -27,6 +27,7 @@ public class ArithmeticSmallestLargest {
         int smallest;
 
         System.out.print("Enter First Integer: ");
+
         num1 = input.nextInt();
 
         System.out.print("Enter Second Integer: ");
@@ -38,7 +39,6 @@ public class ArithmeticSmallestLargest {
         sum = num1 + num2 + num3;
         average = sum / 3;
         product = num1 * num2 * num3;
-
         largest = num1;
         smallest = num1;
 
@@ -54,15 +54,16 @@ public class ArithmeticSmallestLargest {
         if (num3 < smallest)
             smallest = num3;
 
-        System.out.println("The sum is " + sum);
+        System.out.printf("The sum is %d%n " ,  sum);
 
-        System.out.println("The average is " + average);
+        System.out.printf("The average is %d%n " ,  average);
 
-        System.out.println("The product is " + product);
+        System.out.printf("The product is %d%n " , product);
 
-        System.out.println("Largest of three integers is " + largest + " and the smallest is "+ smallest + ".");
-    }
-}
+        System.out.printf("Largest of three integers is %d%n " , largest);  
+
+        System.out.printf("Smallest of three integers is %d%n " , smallest);
+          
 <p>Product: <br>
 <span id = "Product"></span>
 <p>Sum: <br>
