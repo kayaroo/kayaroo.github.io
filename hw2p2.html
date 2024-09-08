@@ -19,25 +19,17 @@
     <br><br>Product: <br>
     <input type="text" id="results" name=res">
     <br><br>
-    <input type="button" id= "calculateBtn" name="multiplication" value="calculate">
+    <input type="button" id= "calculateBtn" name="multiplication" value="calculate" oneclick="
+      multiply_number()">
 </div>
 <script>
-  //   function multiply_number() {
-  //     let a = document.getElementbyId("firstNo").value;
-  //     let b = document.getElementbyId("secondNo").value;
-  //     let c = document.getElementbyId("thirdNo").value;
-  //     let product = a * b * c;
-  //     document.getElementbyId("result").value = product;
-  //   }
-
-function calculate2() {
+function multiply_number() {
   let a = document.getElementbyId("firstNo").value;
   let b = document.getElementbyId("secondNo").value;
   let c = document.getElementbyId("thirdNo").value;
-  let result = document.getElementbyId("result").value = a * b * c;
+  let product = a * b * c;
+  document.getElementbyId("result").value = product;
 }
-let calculate = document.getElementbyId("calculateBtn");
-  calculate.addEventListener("click",calculate2);
   </script>
 <form>
     <a href="https://kayaroo.github.io/hw2p1.html">Part 1</a>
