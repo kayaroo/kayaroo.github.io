@@ -8,46 +8,41 @@
 </head>
 <body>
   <h1>Homework 2 Part 2</h1>
-import java.util.Scanner;
-  public class ArithmeticSmallestLargest {
+import java.util.*;
 
-    public static void main(String[] args) {
+public class Difference
 
-        Scanner input = new Scanner(System.in);
+{
 
-        int num1;
-        int num2;
-        int num3;
-        int sum;
-        int average;
-        int product;
-        double largest
+   public static void main(String args[])
 
-        System.out.print("Enter First Integer: ");
-        num1 = input.nextInt();
+   {
 
-        System.out.print("Enter Second Integer: ");
-        num2 = input.nextInt();
+       int a,b, c;  
 
-        System.out.print("Enter Third Integer: ");
-        num3 = input.nextInt();
- sum = num1 + num2 + num3;
-        average = sum / 3;
-        product = num1 * num2 * num3;
+       double result;
 
+       Scanner sc=new Scanner(System.in);
 
-        if (largest =num1 > num2 & num2 > num3)
+       System.out.println("Enter First number: ");
 
-        System.out.println(sum);
+       a=sc.nextInt();
 
-        System.out.println(average);
+       System.out.println("Enter Second number:");
 
-        System.out.println(product);
+       b=sc.nextInt();
 
-        System.out.println("The biggest number is " + largest);
-    }
+       System.out.println("Enter third number");
+
+       c=sc.nextInt();
+
+       result=(a+b+c)-(a+b+c)/3.0;
+
+       System.out.println("Result is: "+result);
+
+   }
+
 }
-  
 <form>
     <a href="https://kayaroo.github.io/hw2p1.html">Part 1</a>
 </form>
