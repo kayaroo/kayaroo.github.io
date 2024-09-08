@@ -29,14 +29,12 @@
 <p>Maximum: <br>
 <span id = "Maximum"></span>
 <button onclick="run()">Run</button>
-<function>multiplyBy()</function> 
-{
-        num1 = document.getElementById("First Number").value;
-        num2 = document.getElementById("Second Number").value;
-        num3 = document.getElementById("Third Number").value;
-        document.getElementById("result").innerHTML = num1 * num2 * num3;
-}
-
+<form>
+1st Number : <input type="text" id="firstNumber" /><br>
+2nd Number: <input type="text" id="secondNumber" /><br>
+<input type="button" onClick="multiplyBy()" Value="Multiply" />
+<input type="button" onClick="divideBy()" Value="Divide" />
+</form>
 <form>
     <a href="https://kayaroo.github.io/hw2p1.html">Part 1</a>
 </form>
