@@ -8,15 +8,14 @@
 </head>
 <body>
   <h1>Homework 2 Part 2</h1>
-<label for="First Number">First Number</label>
-<input type="number" id="First Number" name="First Number">
-<br>
-<label for="Second Number">Second Number</label>
-<input type="number" id="Second Number" name="Second Number">
-<br>
-<label for="Third Number">Third Number</label>
-<input type="number" id="Third Number" name="Third Number">
-<br>
+<form>
+1st Number : <input type="text" id="firstNumber" /><br>
+2nd Number: <input type="text" id="secondNumber" /><br>
+3rd Number : <input type="text" id="thirdNumber" /><br>
+<input type="button" onClick="multiplyBy()" Value="Multiply" />
+</form>
+<p>Product: <br>
+<span id = "Product"></span>
 <p>Sum: <br>
 <span id = "Sum"></span>
 <p>Average: <br>
@@ -29,12 +28,6 @@
 <p>Maximum: <br>
 <span id = "Maximum"></span>
 <button onclick="run()">Run</button>
-<form>
-1st Number : <input type="text" id="firstNumber" /><br>
-2nd Number: <input type="text" id="secondNumber" /><br>
-<input type="button" onClick="multiplyBy()" Value="Multiply" />
-<input type="button" onClick="divideBy()" Value="Divide" />
-</form>
 <form>
     <a href="https://kayaroo.github.io/hw2p1.html">Part 1</a>
 </form>
