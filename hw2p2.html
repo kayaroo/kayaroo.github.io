@@ -17,8 +17,7 @@
     <br><br> Third Number:<br>
      <input type= "text" id= "thirdNo" name="third">
     <br><br>Product: <br>
-    <input type="button" id= "calculateBtn" name="multiplication" value="calculate" oneclick= 
-      "multiply_number()">
+    <input type="button" id= "calculateBtn" name="multiplication" value="calculate">
 </div>
 <script>
   //   function multiply_number() {
@@ -35,7 +34,7 @@ function calculate2() {
   let c = document.getElementbyId("thirdNo").value;
   let result = document.getElementbyId("result").value = a * b * c;
 }
-let calculate =document.getElementbyId("calculateBtn");
+let calculate = document.getElementbyId("calculateBtn");
   calculate.addEventListener("click",calculate2);
   </script>
 <form>
