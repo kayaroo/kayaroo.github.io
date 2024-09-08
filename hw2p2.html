@@ -8,15 +8,23 @@
 </head>
 <body>
   <h1>Homework 2 Part 2</h1>
+public static void Main()
+{
+    Console.WriteLine("Input three values: ");
+
+    int[] arr = new int[3];
+    for (int i = 0; i < 3; i++)
+        arr[i] = Convert.ToInt32(Console.ReadLine());
+    
+    Console.Write("Here are your 3 numbers:");
+    for(int i = 0; i < arr.Length; i++)
+        Console.Write(" " + arr[i]);
+    Console.WriteLine();
+}
 <form>
-  <label for="first number">First Number:</label>
-  <input type="text" id="First Number" name="First Number">
-  <button type="submit">Run</button>
-</form>
-   <form>
     <a href="https://kayaroo.github.io/hw2p1.html">Part 1</a>
-  </form>
-  <form>
+</form>
+<form>
     <a href="https://kayaroo.github.io/">Main Menu</a>
   </form>
 </body>
