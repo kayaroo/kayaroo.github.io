@@ -8,7 +8,19 @@
 </head>
 <body>
   <h1>Homework 2 Part 2</h1>
-<table></table>
+Private Sub Command1_Click()
+Dim a, b, c As Integer
+a = Val(Text1.Text)
+b = Val(Text2.Text)
+c = Val(Text3.Text)
+If a > b And a > c Then
+    Label4 = "Largest Number = " & a
+ElseIf b > c Then
+    Label4 = "Largest Number = " & b
+Else
+    Label4 = "Largest Number = " & c
+End If
+End Sub
    <form>
     <a href="https://kayaroo.github.io/hw2p1.html">Part 1</a>
   </form>
