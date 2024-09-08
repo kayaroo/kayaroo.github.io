@@ -9,6 +9,12 @@
 <body>
   <h1>Homework 2 Part 2</h1>
   <form>
+ <script>function doMath() {
+  var numOne = document.getElementById('num1').value;
+  var numTwo = document.getElementById('num2').value;
+  var numThree = document.getElementById('num3').value;
+  var theProduct = parseInt(numOne) * parseInt(numTwo)*parseInt(numThree);
+  document.write(theProduct);</script> 
         First Number<br>
         <input id="num1" type="text" name="num1">
     <br>
@@ -23,19 +29,6 @@
         <br><br>
       <input type="button" value="Run" onclick="Run();" />
     </form>
-
-  <script>
-
-      function doMath() {
-          var numOne = document.getElementById('num1').value;
-          var numTwo = document.getElementById('num2').value;
-          var theProduct = parseInt(my_input1) * parseInt(my_input2);  document.write(theProduct);
-          document.write(theProduct);
-
-
-}
-
-  </script>
 
 <form>
     <a href="https://kayaroo.github.io/hw2p1.html">Part 1</a>
