@@ -8,7 +8,12 @@
 </head>
 <body>
   <h1>Homework 2 Part 2</h1>
+import java.util.Scanner;
+  public class ArithmeticSmallestLargest {
 
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
 
         int num1;
         int num2;
@@ -16,23 +21,33 @@
         int sum;
         int average;
         int product;
-        int largest;
-        int smallest;
-          
-<p>Product: <br>
-<span id = "Product"></span>
-<p>Sum: <br>
-<span id = "Sum"></span>
-<p>Average: <br>
-<span id = "Average"></span>
-<p>Product: <br>
-<span id = "Product"></span>
-<input type="button" onClick="multiplyBy()" Value="Multiply" />
-<p>Minimum: <br>
-<span id = "Minimum"></span>
-<p>Maximum: <br>
-<span id = "Maximum"></span>
-<button onclick="run()">Run</button>
+        double largest
+
+        System.out.print("Enter First Integer: ");
+        num1 = input.nextInt();
+
+        System.out.print("Enter Second Integer: ");
+        num2 = input.nextInt();
+
+        System.out.print("Enter Third Integer: ");
+        num3 = input.nextInt();
+ sum = num1 + num2 + num3;
+        average = sum / 3;
+        product = num1 * num2 * num3;
+
+
+        if (largest =num1 > num2 & num2 > num3)
+
+        System.out.println(sum);
+
+        System.out.println(average);
+
+        System.out.println(product);
+
+        System.out.println("The biggest number is " + largest);
+    }
+}
+  
 <form>
     <a href="https://kayaroo.github.io/hw2p1.html">Part 1</a>
 </form>
