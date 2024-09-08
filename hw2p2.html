@@ -32,85 +32,7 @@ function multiply_number() {
 }
   </script>
 
-  <body>
-    <form action=#>
-        <h2>Determine Highest Number</h2>
-        <p>
-            Enter three numbers:<br />
-            1. <input type="text" id="txtFirst" /><br />
-            2. <input type="text" id="txtSecond" /><br />
-            3. <input type="text" id="txtThird" />
-        </p>
-        <p>
-            Highest Number:<input type="text" readonly="readonly" id="txtHighest" /><br />
-        </p>
-        <p>
-            <input type="button" value="Determine Highest Number" id="btnDetermine" onclick="btnDetermine_onclick()" />
-            <input type="reset" />    
-        </p>
-    </form>
-<script>
-let num1 = 3, num2 = 5, num3 = 1;
-let higherNumber = Math.max(num1, num2, num3);
-</script>
 
-<script>
-    import java.util.Scanner;
-
-// exercise 2.17
-public class ArithmeticSmallestLargest {
-
-    public static void main(String[] args) {
-
-        Scanner input = new Scanner(System.in);
-
-        int num1;
-        int num2;
-        int num3;
-        int sum;
-        int average;
-        int product;
-        int largest;
-        int smallest;
-
-        System.out.print("Enter First Integer: ");
-        num1 = input.nextInt();
-
-        System.out.print("Enter Second Integer: ");
-        num2 = input.nextInt();
-
-        System.out.print("Enter Third Integer: ");
-        num3 = input.nextInt();
-
-        sum = num1 + num2 + num3;
-        average = sum / 3;
-        product = num1 * num2 * num3;
-
-        largest = num1;
-        smallest = num1;
-
-        if(num2 > largest)
-            largest = num2;
-
-        if(num3 > largest)
-            largest = num3;
-
-        if(num2 < smallest)
-            smallest = num2;
-
-        if (num3 < smallest)
-            smallest = num3;
-
-        System.out.println("The sum is " + sum);
-
-        System.out.println("The average is " + average);
-
-        System.out.println("The product is " + product);
-
-        System.out.println("Largest of three integers is " + largest + " and the smallest is "+ smallest + ".");
-    }
-}
-</script> 
  <script type="text/javascript">
    var firstNumber, // first string entered by the user
                 secondNumber, // second string entered by the user
@@ -171,48 +93,7 @@ var firstNumber;
      else if (thirdNumber > firstNumber && thirdNumber > secondNumber)
         window.alert(thirdNumber + " is largest");
     </script> 
- //  Initialising variables
-var number1, number2, number3, sum, average, product, largest, smallest;
 
-//Inpuing the Numbers 
-// parseInt is used to covert the var to integer value or else the result will be concatenation of all the values
-number1 = parseInt(window.prompt('Enter Number 1 :'));
-number2 = parseInt(window.prompt('Enter Number 2 :'));
-number3 = parseInt(window.prompt('Enter Number 3 :'));
-
-// Adding the Numbers
-sum = number1 + number2 + number3;
-
-// Finding the average
-average = parseInt(sum) / 3;
-
-// Finding Product 
-product = number1 * number2 * number3;
-
-// Checking the Largest value
-if (number1 > number2 && number1 > number3) {
-    largest = number1;
-} else if (number2 > number1 && number2 > number3) {
-    largest = number2;
-} else {
-    largest = number3;
-}
-
-//Checking the smallest value
-
-if (number1 < number2 && number1 < number3) {
-    smallest = number1;
-} else if (number2 < number1 && number2 < number3) {
-    smallest = number2;
-} else {
-    smallest = number3;
-}
-
-//Returning or Printing Result in Alert box
-window.alert('Sum : ' + sum + '\nAverage : ' + average.toFixed(2) + '\nProduct : ' + product + '\nLargest : ' + largest + '\nSmallest : ' + smallest);
-    <script>
-      
-    </script> 
 <form>
     <a href="https://kayaroo.github.io/hw2p1.html">Part 1</a>
 </form>
