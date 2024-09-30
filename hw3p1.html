@@ -27,27 +27,13 @@
   <h1>Homework 3 Part 1</h1>
 <h1>Points/Percentage to Letter Grade</h1>
 <table bgcolor="black">
-  const tableCell = document.querySelector(".split-cell");
-
-function addDivider() {
-  const divider = document.createElement("div");
-  divider.classList.add("divider");
-  tableCell.appendChild(divider);
-}
-
-function removeDivider() {
-  const divider = tableCell.querySelector(".divider");
-  if (divider) {
-    tableCell.removeChild(divider);
-  }
-}
   <tr>
     <th>Percentage</th>
     <th>Letter Grade</th>
   </tr>
   
   <tr>
-    <td>90-100</td>
+    <td class="split-cell">90-100</td>
     <td>A</td>
   </tr> 
   <tr>
