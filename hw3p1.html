@@ -19,16 +19,29 @@
     }
 
     table
-{
+td {
   border-collapse: collapse;
-  border: solid;
+  border: 1px solid black;
+  border-right:none;
+  border-bottom:none;
+  
 }
+
+td:nth-last-child(1)   {
+border-right: 1px solid black; 
+}
+
+table {border-bottom: 1px solid black; 
+      }
+
+
+    
   </style>
 </head>
 <body>
   <h1>Homework 3 Part 1</h1>
 <h1>Points/Percentage to Letter Grade</h1>
-<table border="1" background:#000000>
+<table border="1" background:#000000 cellspacing:"0" >
   <tr>
     <th scope="col" background:#000000>Percentage</th>
     <th scope="col" background:#000000>Letter Grade</th>
