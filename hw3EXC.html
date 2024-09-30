@@ -8,6 +8,55 @@
 </head>
 <body>
   <h1>Homework 3 Extra Credit</h1>
+
+<h1>Multiplication Practice</h1>
+  <div id="questionArea"></div>
+  <input type="number" id="answer" placeholder="Enter your answer">
+  <button onclick="checkAnswer()">Check Answer</button>
+  <p id="result"></p>
+  <button id="yesButton" style="display: none;" onclick="newQuestion()">Yes</button>
+  <button id="noButton" style="display: none;" onclick="endGame()">No</button>
+
+  <script>
+    let num1, num2;
+
+    function generateQuestion() {
+      num1 = Math.floor(Math.random() * 10); 
+      num2 = Math.floor(Math.random() * 10);
+      document.getElementById("questionArea").textContent = `How much is ${num1} times ${num2}?`;
+      document.getElementById("answer").value = ""; // Clear the input box
+      document.getElementById("result").textContent = ""; // Clear previous result
+    }
+
+    function checkAnswer() {
+      const userAnswer = parseInt(document.getElementById("answer").value);
+      if (userAnswer === num1 * num2) {
+        document.getElementById("result").textContent = "Very good!";
+        document.getElementById("yesButton").style.display = "inline-block";
+        document.getElementById("noButton").style.display = "inline-block";
+      } else {
+        document.getElementById("result").textContent = "No. Please try again.";
+      }
+    }
+
+    function newQuestion() {
+      generateQuestion();
+      document.getElementById("yesButton").style.display = "none";
+      document.getElementById("noButton").style.display = "none";
+    }
+
+    function endGame() {
+      document.getElementById("questionArea").textContent = "Thanks for playing, see you next time!";
+      document.getElementById("answer").style.display = "none";
+      document.getElementById("result").textContent = "";
+      document.getElementById("yesButton").style.display = "none";
+      document.getElementById("noButton").style.display = "none";
+    }
+
+    generateQuestion(); // Start the game with the first question
+  </script>
+
+  
 <form>
     <a href="https://kayaroo.github.io/hw3p1.html">Part 1</a>
 </form>
