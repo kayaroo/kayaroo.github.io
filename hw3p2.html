@@ -11,8 +11,8 @@
 <body>
   <table>
     <tr>
-      <td>Salesperson Name:</td>
-      <td><input type="text" id="salespersonName"></td>
+      <td>Seller's Name:</td>
+      <td><input type="text" id="sellerName"></td>
     </tr>
     <tr>
       <td>Item 1 (Value: $20.99):</td>
@@ -38,7 +38,7 @@
 
   <script>
     function calculateEarnings() {
-      const salespersonName = document.getElementById("salespersonName").value;
+      const sellerName = document.getElementById("sellerName").value;
       const item1Qty = parseFloat(document.getElementById("item1Qty").value);
       const item2Qty = parseFloat(document.getElementById("item2Qty").value);
       const item3Qty = parseFloat(document.getElementById("item3Qty").value);
@@ -51,7 +51,7 @@
 
       const resultsDiv = document.getElementById("results");
       resultsDiv.innerHTML = `
-        <h2>Results for ${salespersonName}:</h2>
+        <h2>Results for ${sellerName}:</h2>
         <p>Total Sales: $${totalSales.toFixed(2)}</p>
         <p>Commission: $${commission.toFixed(2)}</p>
         <p>Total Earnings: $${totalEarnings.toFixed(2)}</p>
