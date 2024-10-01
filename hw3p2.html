@@ -61,7 +61,51 @@
     }
   </script>
 
- <form>
+<h2>Sales Report</h2>
+<form id= "salesForm">
+<table border='1'>
+  <tr><th>Item #</th><th>Price ($)</th><th>QTY Sold</th></tr>
+  <tr><td>1</td><td>$20.99</td><td><input type='number' min='0' value='0'></td></tr>
+  <tr><td>2</td><td>$12.75</td><td><input type='number' min='0' value='0'></td></tr>
+  <tr><td>3</td><td>$9.95</td><td><input type='number' min='0' value='0'></td></tr>
+  <tr><td>4</td><td>$35.89</td><td><input type='number' min='0' value='0'></td></tr>
+
+  <script>
+//Calculate total function.
+    function calculateTotals(){
+      const prices=[20.99,12.75,9.95,35.89];
+
+//Get all qty values from inputs in salesForm.
+const qtyinputs=document.querySelectionAll('#salesForm input[type=number]');
+let totalAmountSold=totalWeeklyEarnings=zero;
+      for (let i=zero;i<=prices.length-one;i++)[//Loop through items
+      const qty=parselnt(qtyInputs[i].value)||zero;
+
+//Update totals accordingly.
+Total Amount Sold +=(prices[I]*quantity);
+
+}
+document.getElementByld('amountSold').innerText='Total Amount Sold:$${totalAmountSold.toFixed(two)}
+document.getElementByld('amountSold').innerText='Total Weekly Earings:$${totalWeeklyEarnings.toFixed(two)}
+}
+
+//Attach event listener ob submission of sales report.
+    document.getElementByld('salesForm')addEventListener("submit",function(e){e.preventDefault();calculateTotals();
+       });  
+  </script>
+  
+<p id="amountsold">Total Amount Sold:</p>
+<p id="weekly earnings">Total  Weekly Earings:</p>
+<button typ="button" onclick="calculateTotals()"\Submit/button>
+  
+    
+  
+   
+   
+
+
+   
+<form>
     <a href="https://kayaroo.github.io/hw3p1.html">Part 1</a>
 </form>
   <form>
