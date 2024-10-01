@@ -71,62 +71,6 @@ function calculateEarnings() {
 
 
 
-
-
-
-
- <h1>Sales Commission Calculator</h1>
-
-  <table>
-    <tr>
-      <td>Salesperson Name:</td>
-      <td><input type="text" id="salespersonName"></td>
-    </tr>
-    <tr>
-      <td>Item 1 (Value: $20.99):</td>
-      <td><input type="number" id="item1Qty" value="0"></td>
-    </tr>
-    <tr>
-      <td>Item 2 (Value: $12.75):</td>
-      <td><input type="number" id="item2Qty" value="0"></td>
-    </tr>
-    <tr>
-      <td>Item 3 (Value: $9.95):</td>
-      <td><input type="number" id="item3Qty" value="0"></td>
-    </tr>
-    <tr>
-      <td>Item 4 (Value: $35.89):</td>
-      <td><input type="number" id="item4Qty" value="0"></td>
-    </tr>
-  </table>
-
-  <button onclick="calculateEarnings()">Calculate Earnings</button>
-
-  <div id="results"></div>
-
-  <script>
-    function calculateEarnings() {
-      const salespersonName = document.getElementById("salespersonName").value;
-      const item1Qty = parseFloat(document.getElementById("item1Qty").value);
-      const item2Qty = parseFloat(document.getElementById("item2Qty").value);
-      const item3Qty = parseFloat(document.getElementById("item3Qty").value);
-      const item4Qty = parseFloat(document.getElementById("item4Qty").value);
-
-      const itemPrices = [20.99, 12.75, 9.95, 35.89];
-      const totalSales = (item1Qty * itemPrices[0]) + (item2Qty * itemPrices[1]) + (item3Qty * itemPrices[2]) + (item4Qty * itemPrices[3]);
-      const commission = 0.09 * totalSales;
-      const totalEarnings = 250 + commission;
-
-      const resultsDiv = document.getElementById("results");
-      resultsDiv.innerHTML = `
-        <h2>Results for ${salespersonName}:</h2>
-        <p>Total Sales: $${totalSales.toFixed(2)}</p>
-        <p>Commission: $${commission.toFixed(2)}</p>
-        <p>Total Earnings: $${totalEarnings.toFixed(2)}</p>
-      `;
-    }
-  </script>
-
   <form>
     <a href="https://kayaroo.github.io/hw3p1.html">Part 1</a>
 </form>
