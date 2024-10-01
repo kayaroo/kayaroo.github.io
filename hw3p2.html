@@ -48,12 +48,14 @@
       const totalSales = (item1Qty * itemPrices[0]) + (item2Qty * itemPrices[1]) + (item3Qty * itemPrices[2]) + (item4Qty * itemPrices[3]);
       const commission = 0.09 * totalSales;
       const totalWeeklyEarnings = 250 + commission;
+      const totalAmountSold = (item1Qty)+(item2Qty)+(item3Qty)+(item4Qty);
 
       const resultsDiv = document.getElementById("results");
       resultsDiv.innerHTML = `
         <h2>Results for ${sellerName}:</h2>
         <p>Total Sales: $${totalSales.toFixed(2)}</p>
         <p>Commission: $${commission.toFixed(2)}</p>
+        <p>Total Amount Sold:$${totalAmountSold.toFixed(2)}</p>
         <p>Total Weekly Earnings: $${totalWeeklyEarnings.toFixed(2)}</p>
       `;
     }
