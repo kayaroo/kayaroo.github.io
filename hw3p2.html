@@ -115,8 +115,11 @@ document.getElementByld('amountSold').innerText='Total Weekly Earings:$${totalWe
   <p id="amountsold">Total Amount Sold:</p>
 <p id="weekly earnings">Total  Weekly Earings:</p>
 <button typ="button" onclick="calculateTotals()"\Submit/button>
-  
-     <script>
+  <button onclick="calculateEarnings()">Calculate Earnings</button>
+
+  <div id="results"></div>
+
+  <script>
     function calculateEarnings() {
       const sellerName = document.getElementById("sellerName").value;
       const item1Qty = parseFloat(document.getElementById("item1Qty").value);
@@ -137,11 +140,7 @@ document.getElementByld('amountSold').innerText='Total Weekly Earings:$${totalWe
         <p>Total Earnings: $${totalEarnings.toFixed(2)}</p>
       `;
     }
-  </script> 
-    <button onclick="calculateEarnings()">Calculate Earnings</button>
-
-  <div id="results"></div>
-    
+  </script>
     </script>
   
 
