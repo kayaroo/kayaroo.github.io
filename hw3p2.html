@@ -33,7 +33,6 @@
   </table>
 
   <button onclick="calculateEarnings()">Calculate Earnings</button>
-  <button onclick="clearForm()">Clear</button>
 
   <div id="results"></div>
 
@@ -44,13 +43,6 @@
       const item2Qty = parseFloat(document.getElementById("item2Qty").value);
       const item3Qty = parseFloat(document.getElementById("item3Qty").value);
       const item4Qty = parseFloat(document.getElementById("item4Qty").value);
-
-    function clearForm() {
-     document.getElementById("sellerName").value = "";
-     document.getElementById("item1Qty").value = "";
-     document.getElementById("item2Qty").value = "";
-     document.getElementById("item3Qty").value = "";
-     document.getElementById("item4Qty").value = "";
      
       const itemPrices = [20.99, 12.75, 9.95, 35.89];
       const totalSales = (item1Qty * itemPrices[0]) + (item2Qty * itemPrices[1]) + (item3Qty * itemPrices[2]) + (item4Qty * itemPrices[3]);
