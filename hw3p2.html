@@ -145,6 +145,36 @@ document.getElementByld('amountSold').innerText='Total Weekly Earings:$${totalWe
       `;
     }
   </script>
+   <button onclick="calculateEarnings()">Calculate Earnings</button>
+
+  <div id="results"></div>
+
+  <script>
+    function calculateEarnings() {
+      const sellerName = document.getElementById("sellerName").value;
+      const firstitemName = document.getElementById("firstitemName").value;
+      const seconditemName = document.getElementById("seconditemName").value;
+      const thirditemName = document.getElementById("thirditemName").value;
+      const fourthitemName = document.getElementById("fourthitemName").value;
+      const item1Qty = parseFloat(document.getElementById("item1Qty").value);
+      const item2Qty = parseFloat(document.getElementById("item2Qty").value);
+      const item3Qty = parseFloat(document.getElementById("item3Qty").value);
+      const item4Qty = parseFloat(document.getElementById("item4Qty").value);
+
+      const itemPrices = [20.99, 12.75, 9.95, 35.89];
+      const totalSales = (item1Qty * itemPrices[0]) + (item2Qty * itemPrices[1]) + (item3Qty * itemPrices[2]) + (item4Qty * itemPrices[3]);
+      const commission = 0.09 * totalSales;
+      const totalEarnings = 250 + commission;
+
+      const resultsDiv = document.getElementById("results");
+      resultsDiv.innerHTML = `
+        <h2>Results for ${sellerName}:</h2>
+        <p>Total Sales: $${totalSales.toFixed(2)}</p>
+        <p>Commission: $${commission.toFixed(2)}</p>
+        <p>Total Earnings: $${totalEarnings.toFixed(2)}</p>
+      `;
+    }
+  </script>
     </script>
   
 
