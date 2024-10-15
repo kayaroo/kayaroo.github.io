@@ -4,10 +4,74 @@
   <title>Homework 4 Part 2</title>
   <style>
   body{background:#faebd7;}
+
+   table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
   </style>
 </head>
 <body>
   <h1>Homework 4 Part 2</h1>
+<h2>Learn about Compound Interest</h2>
+ <div id="tables-container"></div>
+
+  <script>
+    const principal = 1000;
+    const interestRates = [0.05, 0.06, 0.07]; 
+    const years = 5; 
+
+    const tablesContainer = document.getElementById('tables-container');
+
+    for (let i = 0; i < interestRates.length; i++) {
+      const rate = interestRates[i];
+      let tableHTML = `
+        <table>
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Amount on Deposit</th>
+              <th>Interest Rate</th>
+            </tr>
+          </thead>
+          <tbody>
+      `;
+
+      for (let year = 1; year <= years; year++) {
+        const amount = principal * Math.pow((1 + rate), year);
+        tableHTML += `
+          <tr>
+            <td>${year}</td>
+            <td>${amount.toFixed(2)}</td>
+            <td>${(rate * 100).toFixed(2)}%</td>
+          </tr>
+        `;
+      }
+
+      tableHTML += `
+          </tbody>
+        </table>
+      `;
+      tablesContainer.innerHTML += tableHTML;
+    }
+  </script>
+</body>
 <form>
     <a href="https://kayaroo.github.io/hw4p1.html">Part 1</a>
 </form>
