@@ -8,6 +8,53 @@
 </head>
 <body>
   <h1>Homework 4 Extra Credit </h1>
+
+  <h2>Hollow Square Generator</h2>
+
+<form id="squareForm">
+  <label for="size">Enter a number between 2 and 10:</label>
+  <input type="number" id="size" name="size">
+  <button type="button" onclick="drawSquare()">Generate Square</button>
+  <button type="button" onclick="clearForm()">Clear</button>
+</form>
+
+<div id="result"></div>
+
+<script>
+function drawSquare() {
+  // Get the user input from the form
+  let size = parseInt(document.getElementById("size").value);
+
+  // Validate the input
+  if (isNaN(size) || size < 2 || size > 10) {
+    document.getElementById("result").innerHTML = "Invalid input. Please enter a number between 2 and 10.";
+    return;
+  }
+
+  // Generate the square pattern
+  let square = "";
+  for (let i = 1; i <= size; i++) {
+    for (let j = 1; j <= size; j++) {
+      if (i === 1 || i === size || j === 1 || j === size) {
+        square += "*";
+      } else {
+        square += "&nbsp;&nbsp;"; // Two non-breaking spaces for better visual aspect
+      }
+    }
+    square += "<br>";
+  }
+
+  // Display the square in the result div
+  document.getElementById("result").innerHTML = square;
+}
+
+function clearForm() {
+  document.getElementById("squareForm").reset();
+  document.getElementById("result").innerHTML = "";
+}
+</script>
+
+</body>
 <form>
     <a href="https://kayaroo.github.io/hw4p1.html">Part 1</a>
 </form>
