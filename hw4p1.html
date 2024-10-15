@@ -8,6 +8,45 @@
 </head>
 <body>
   <h1>Homework 4 Part 1</h1>
+<body>
+
+  <h1>Calculating Products and Sums</h1>
+
+  <h2>Every Fourth Integer (using for loop)</h2>
+  <p>This script calculates the product and sum of every fourth integer from 5 to 25 inclusive.</p>
+
+  <script>
+    let product = 1;
+    let sum = 0;
+
+    for (let i = 5; i <= 25; i += 4) {
+      product *= i;
+      sum += i;
+    }
+
+    document.write(`<p>The result of 5 * 9 * 13 * 17 * 21 * 25 is ${product.toLocaleString()}</p>`);
+    document.write(`<p>The result of 5 + 9 + 13 + 17 + 21 + 25 is ${sum.toLocaleString()}</p>`);
+  </script>
+
+  <h2>Every Third Integer (using while loop)</h2>
+  <p>This script calculates the product and sum of every third integer from 3 to 18 inclusive.</p>
+
+  <script>
+    let product2 = 1;
+    let sum2 = 0;
+    let j = 3;
+
+    while (j <= 18) {
+      product2 *= j;
+      sum2 += j;
+      j += 3; 
+    }
+
+    document.write(`<p>The result of 3 * 6 * 9 * 12 * 15 * 18 is ${product2.toLocaleString()}</p>`);
+    document.write(`<p>The result of 3 + 6 + 9 + 12 + 15 + 18 is ${sum2.toLocaleString()}</p>`);
+  </script>
+
+</body>
 
 <form>
     <a href="https://kayaroo.github.io/hw4p2.html">Part 2</a>
