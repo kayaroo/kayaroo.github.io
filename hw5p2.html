@@ -8,6 +8,50 @@
 </head>
 <body>
   <h1>Homework 5 Part 2</h1>
+
+ <!-- First Pulldown (onchange) -->
+    <label for="menu1">Menu 1 (Opens on change):</label>
+    <select id="menu1" onchange="openInNewTab(this.value)">
+        <option value="">Select a website</option>
+        <option value="https://www.example.com">Example.com</option>
+        <option value="https://www.google.com">Google</option>
+        <option value="https://www.wikipedia.org">Wikipedia</option>
+    </select>
+    <br><br>
+
+
+    <!-- Second Pulldown (onclick) -->
+    <label for="menu2">Menu 2 (Opens on button click):</label>
+    <select id="menu2">
+        <option value="">Select a website</option>
+        <option value="https://www.mozilla.org">Mozilla</option>
+        <option value="https://www.bbc.com">BBC</option>
+        <option value="https://www.nytimes.com">New York Times</option>
+    </select>
+
+    <button onclick="openSelectedWebsite()">Open in New Tab</button>
+
+
+    <script>
+        function openInNewTab(url) {
+            if (url) {
+                window.open(url, '_blank');
+            }
+        }
+
+        function openSelectedWebsite() {
+            var menu2 = document.getElementById("menu2");
+            var selectedValue = menu2.value;
+
+            if (selectedValue) {
+                window.open(selectedValue, '_blank');
+            } else {
+                alert("Please select a website from the menu.");
+            }
+        }
+    </script>
+ 
+  
 <form>
     <a href="https://kayaroo.github.io/hw5p1.html">Part 1</a>
 </form>
