@@ -9,7 +9,7 @@
 <body>
   <h1>Homework 5 Part 3</h1>
 
- <form id="stateForm">
+<form id="stateForm">
         Enter State Name or Abbreviation: <input type="text" id="stateInput"><br><br>
         <button type="button" onclick="getStateInfo()">Get State Info</button>
         <button type="reset">Clear</button><br><br>
@@ -27,29 +27,30 @@
         ];
 
         function getStateInfo() {
-            const stateInput = document.getElementById("stateInput").value.toLowerCase();
-            const output = document.getElementById("output");
-            output.innerHTML = ""; // Clear previous output
-
+            const userInput = document.getElementById("stateInput").value.toLowerCase();
             let stateFound = false;
+            let outputMessage = "";
 
             for (let i = 0; i < states.length; i++) {
                 const stateAbbr = states[i][0].toLowerCase();
                 const stateName = states[i][1].toLowerCase();
 
-                if (stateInput === stateAbbr || stateInput === stateName) {
-                    output.innerHTML = `Thanks for your inquiry, here is the information you requested:\n\nState abbr = ${states[i][0]}\nState Name = ${states[i][1]}\nCapital = ${states[i][2]}\nPopulation = ${states[i][3].toLocaleString()}`; // Format population with commas
+                if (userInput === stateAbbr || userInput === stateName) {
                     stateFound = true;
-                    break; 
+                    outputMessage = `Thanks for your inquiry, here is the information you requested:\n\nState abbr = ${states[i][0]}\nState Name = ${states[i][1]}\nCapital = ${states[i][2]}\nPopulation = ${states[i][3]}`;
+                    break; // Exit loop once state is found
                 }
             }
 
             if (!stateFound) {
-                let availableStates = states.map(state => state[1]).join(", "); // Create a comma-separated list of available states
-                output.innerHTML = `Sorry, we do not have information about this state! We only have information about: ${availableStates}.`;
+                const availableStates = states.map(state => state[1]).join(", "); // List available states
+                outputMessage = `Sorry, we do not have information about this state! We only have information about ${availableStates}.`;
             }
+
+            document.getElementById("output").textContent = outputMessage;
         }
     </script>
+
 
 
 
