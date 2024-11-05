@@ -9,6 +9,61 @@
 <body>
   <h1>Homework 5 Part 3</h1>
 
+<form id="stateForm">
+        Enter State Name or Abbreviation: <input type="text" id="stateInput"><br><br>
+        <button type="submit">Get State Info</button>
+        <button type="button" id="clearBtn">Clear</button><br><br>
+        <div id="output"></div>
+    </form>
+
+    <script>
+        const states = {
+            "AL": { name: "Alabama", capital: "Montgomery", population: 4903185 },
+            "AK": { name: "Alaska", capital: "Juneau", population: 731545 },
+            "AZ": { name: "Arizona", capital: "Phoenix", population: 7278717 },
+            "AR": { name: "Arkansas", capital: "Little Rock", population: 3017825 },
+            "CA": { name: "California", capital: "Sacramento", population: 39512223 },
+            "CO": { name: "Colorado", capital: "Denver", population: 5758736 }
+            // ... add other states
+        };
+
+        const form = document.getElementById('stateForm');
+        const output = document.getElementById('output');
+        const stateInput = document.getElementById('stateInput');
+        const clearBtn = document.getElementById('clearBtn');
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const input = stateInput.value.trim().toUpperCase();
+            let found = false;
+
+            for (const abbr in states) {
+                if (input === abbr || input === states[abbr].name.toUpperCase()) {
+                    output.classList.remove("error");
+                    output.textContent = `Thanks for your inquiry, here is the information you requested:\nState abbr = ${abbr}\nState Name = ${states[abbr].name}\nCapital = ${states[abbr].capital}\nPopulation = ${states[abbr].population}`;
+                    found = true;
+                    break;
+                }
+            }
+
+            if (!found) {
+                const availableStates = Object.keys(states).join(", ");
+                output.classList.add("error");
+                output.textContent = `Sorry, we do not have information about this state! We only have information about: ${availableStates}`;
+            }
+        });
+
+
+        clearBtn.addEventListener('click', () => {
+            stateInput.value = '';
+            output.textContent = '';
+            output.classList.remove("error");
+        });
+
+    </script>
+
+
 <form>
     <a href="https://kayaroo.github.io/hw5.html">Homework 5</a>
 </form>  
