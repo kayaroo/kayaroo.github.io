@@ -11,9 +11,9 @@
 
  <form id="stateForm">
         Enter State Name or Abbreviation: <input type="text" id="stateInput"><br><br>
-        <button type="submit">Get State Info</button>
-        <button type="button" id="clearBtn">Clear</button><br><br>
-        <div id="output"></div>
+        <button type="button" onclick="getStateInfo()">Get State Info</button>
+        <button type="reset">Clear</button><br><br>
+        <div id="output"></div> 
     </form>
 
     <script>
@@ -24,43 +24,33 @@
             ["AR", "Arkansas", "Little Rock", 3017825],
             ["CA", "California", "Sacramento", 39512223],
             ["CO", "Colorado", "Denver", 5758736]
-            // ... add other states
         ];
 
-        const form = document.getElementById('stateForm');
-        const output = document.getElementById('output');
-        const stateInput = document.getElementById('stateInput');
-        const clearBtn = document.getElementById('clearBtn');
+        function getStateInfo() {
+            const stateInput = document.getElementById("stateInput").value.toLowerCase();
+            const output = document.getElementById("output");
+            output.innerHTML = ""; // Clear previous output
 
-        form.addEventListener('submit', (event) => {
-            event.preventDefault();
+            let stateFound = false;
 
-            const input = stateInput.value.trim().toUpperCase();
-            let found = false;
+            for (let i = 0; i < states.length; i++) {
+                const stateAbbr = states[i][0].toLowerCase();
+                const stateName = states[i][1].toLowerCase();
 
-            for (const state of states) {
-                const [abbr, name] = state;
-                if (input === abbr || input === name.toUpperCase()) {
-                    output.classList.remove("error"); // Remove error class if it exists
-                    output.textContent = `Thanks for your inquiry, here is the information you requested:\nState abbr = ${state[0]}\nState Name = ${state[1]}\nCapital = ${state[2]}\nPopulation = ${state[3]}`;
-                    found = true;
+                if (stateInput === stateAbbr || stateInput === stateName) {
+                    output.innerHTML = `Thanks for your inquiry, here is the information you requested:\n\nState abbr = ${states[i][0]}\nState Name = ${states[i][1]}\nCapital = ${states[i][2]}\nPopulation = ${states[i][3].toLocaleString()}`; // Format population with commas
+                    stateFound = true;
                     break; 
                 }
             }
 
-            if (!found) {
-                const availableStates = states.map(state => state[0]).join(", "); // Get abbreviations
-                output.classList.add("error");
-                output.textContent = `Sorry, we do not have information about this state! We only have information about: ${availableStates}`;
+            if (!stateFound) {
+                let availableStates = states.map(state => state[1]).join(", "); // Create a comma-separated list of available states
+                output.innerHTML = `Sorry, we do not have information about this state! We only have information about: ${availableStates}.`;
             }
-        });
+        }
+    </script>
 
-        clearBtn.addEventListener('click', () => {
-            stateInput.value = '';
-            output.textContent = '';
-            output.classList.remove("error");
-        });
-    </script
 
 
 
