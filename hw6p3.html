@@ -8,34 +8,27 @@
 </head>
 <h1>Homework 6 Part 3</h1>
 <body>
-<form>
-<input type="text" id="phone" placeholder="(999) 999-9999">
-<button id="submit">Submit</button>
-<button id="clear">Clear</button>
-</form>
-<div id="output"></div>
-<a href="main.html">Back to main page</a>
-<script>
-let phone = document.getElementById('phone');
-let submit = document.getElementById('submit');
-let clear = document.getElementById('clear');
-let output = document.getElementById('output');
+ <form>
+        <input type="text" id="phone" name="phone" placeholder="(999) 999-9999" required>
+        <button type="submit">Submit</button>
+        <button type="reset">Clear</button>
+    </form>
+    <div id="output"></div>
+  
+const phoneInput = document.getElementById('phone');
+const outputDiv = document.getElementById('output');
 
-submit.addEventListener('click', function() {
- let phoneNumber = phone.value;
- let pattern = /^\(\d{3}\) \d{3}-\d{4}$/;
- if (pattern.test(phoneNumber)) {
- output.innerText = "Thank you for your phone number. You should expect to of our agents in the future.";
- } else {
- output.innerText = "Error: Please enter your phone number in the format (999) 999-9999.";
- }
+phoneInput.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const phone = phoneInput.value;
+    const pattern = /^\(\d{3}\) \d{3}-\d{4}$/;
+    if (pattern.test(phone)) {
+        outputDiv.innerText = 'Thank you for your phone number. You should expect to be contacted by one of our agents in the future.';
+    } else {
+        outputDiv.innerText = 'Error: Please enter the phone number in the format (999) 999-9999.';
+    }
 });
 
-clear.addEventListener('click', function() {
- phone.value = '';
- output.innerText = '';
-});
-</script>
 
 <form>
     <a href="https://kayaroo.github.io/hw6p1.html">Part 1</a>
