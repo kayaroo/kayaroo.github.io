@@ -8,26 +8,47 @@
 </head>
 <h1>Homework 6 Part 3</h1>
 <body>
- <form>
-        <input type="text" id="phone" name="phone" placeholder="(999) 999-9999" required>
-        <button type="submit">Submit</button>
-        <button type="reset">Clear</button>
-    </form>
-    <div id="output"></div>
-  
-const phoneInput = document.getElementById('phone');
-const outputDiv = document.getElementById('output');
+<div class="container">
+<h2>Phone Number Validation</h2>
+<form id= "phoneForm">
+<label for="phoneNumber"> Enter your phone number </label> 
+<input type="text" id="phoneNumber"
+name="phoneNumber" placeholder="(999)-999-9999"> <br></br>
 
-phoneInput.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const phone = phoneInput.value;
-    const pattern = /^\(\d{3}\) \d{3}-\d{4}$/;
-    if (pattern.test(phone)) {
-        outputDiv.innerText = 'Thank you for your phone number. You should expect to be contacted by one of our agents in the future.';
-    } else {
-        outputDiv.innerText = 'Error: Please enter the phone number in the format (999) 999-9999.';
-    }
-});
+<button type= "button"
+  onclick="validatePhoneNumber()">Submit</button>
+
+<button type= "button"
+  onclick="clearForm" ()">Clear</button>
+</form>
+<div id="output" class="output"></div>
+<br>
+</div>
+
+<script>
+  function validatePhoneNumber(){
+  const phoneNumber=
+  documnet.getElementByld('phoneNumber').
+  value;
+  const output=
+  document.getElementByld('output');
+  const phonePattern=/^3\d{3}-\d{4}$/;
+
+  if(phonePattern.test(phoneNumber)){
+  output.textContent="Thank you for your phone number. You should expect to be contacted by one of our agents in the future.";
+
+  output.style.color="green";
+  }else{
+   output.textContent="Error. Please enter the phone number in the correct format: (999)-999-9999.";
+
+  output.style.color="red";
+  }
+  }
+  function clearForm(){
+ documnet.getElementByld('phoneForm').reset();
+documnet.getElementByld('output').textContent="";
+    
+</script>
 
 
 <form>
