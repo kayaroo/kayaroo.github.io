@@ -7,32 +7,34 @@
   </style>
 </head>
 <h1>Homework 6 Part 2</h1>
-<form>
-<script>
-<textarea id="content" name="content" rows="10" cols="50"></textarea>
+
+ <form>
+        <textarea id="content" name="content" rows="10" cols="50"></textarea>
         <input type="text" id="char" name="char" maxlength="1" required>
         <button type="submit">Submit</button>
-    </form>
+        <button type="reset">Clear</button>
+  </form>
   <div id="output"></div>
+  
 const contentInput = document.getElementById('content');
 const charInput = document.getElementById('char');
 const outputDiv = document.getElementById('output');
 
 charInput.addEventListener('submit', (e) => {
     e.preventDefault();
-    const char = charInput.value.toUpperCase();
-    const content = contentInput.value.toUpperCase();
-    const charCount = content.split(char).length - 1;
-    if (charCount > 0) {
-        outputDiv.innerText = `Character ${char} found ${charCount} times in the content`;
+    const content = contentInput.value;
+    const char = charInput.value;
+    const count = content.split(char).length - 1;
+    if (count >= 0) {
+        outputDiv.innerText = `The character ${char} appears ${count} times in the content.`;
     } else {
-        const newWindow = window.open(`Search character ${char} not found in the content you typed`, 'Search Result', `width=300,height=100`);
-        newWindow.addEventListener('close', () => {
-            charInput.value = '';
-        });
+        const newWindow = window.open('', '', 'width=300,height=100');
+        newWindow.document.write(`Search character ${char} not found in the content you typed.`);
+        newWindow.document.write(`<button onclick="window.close()">CLOSE</button>`);
     }
 });
-</script>
+
+
 
 <form>
     <a href="https://kayaroo.github.io/hw6p1.html">Part 1</a>
