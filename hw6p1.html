@@ -9,29 +9,27 @@
 <body>
   <h1>Homework 6 Part 1</h1>
 
- <form>
-        <input type="number" id="num" name="num" required>
-        <button type="submit">Submit</        <button type="reset">Clear</button>
+  <form>
+        <input type="text" id="number" name="number" required>
+        <button type="submit">Submit</button>
+        <button type="reset">Clear</button>
     </form>
-<div id="output"></div>
-
-const numInput = document.getElementById('num');
+    <div id="output"></div>
+<script>
+const numberInput = document.getElementById('number');
 const outputDiv = document.getElementById('output');
 
-numInput.addEventListener('submit', (e) => {
+numberInput.addEventListener('submit', (e) => {
     e.preventDefault();
-    const num = parseFloat(numInput.value);
-    if (num.toString().length < 5) {
-        outputDiv.innerText = 'You need to type a number with at least 4 decimals, please try again';
+    const number = parseFloat(numberInput.value);
+    if (number.toString().split('.').length - 1 >= 3) {
+        outputDiv.innerText = `You typed number ${number.toFixed(4)}<br>Rounded to the nearest integer = ${Math.round(number)}<br>Square root rounded to integer = ${Math.floor(Math.sqrt(number))}<br>Rounded to the nearest 10th position = ${number.toFixed(1)}<br>Rounded to the nearest 100th position = ${number.toFixed(2)}<br>Rounded to the nearest 1000th position = ${number.toFixed(3)}`;
     } else {
-        const roundedInt = Math.round(num);
-        const sqrtInt = Math.floor(Math.sqrt(num));
-        const roundedTenth = Math.toFixed(num, 1);
-        const roundedHundredth = Math.toFixed(num, 2);
-        const roundedThousandth = Math.toFixed(num, 3);
-        outputDiv.innerText = `You typed number ${num}\nRounded to the nearest integer = ${roundedInt}\nSquare root rounded to integer = ${sqrtInt}\nRounded to the nearest 10th position = ${roundedTenth}\nRounded to the nearest 100th position = ${roundedHundredth}\nRounded to the nearest 1000th position = ${roundedThousandth}`;
+        outputDiv.innerText = 'Error: Please enter a number with at least 4 decimals.';
     }
 });
+</script>
+
 
 
 <form>
