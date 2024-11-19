@@ -10,6 +10,33 @@
   <h1>Homework 6 Part 1</h1>
 
 <form>
+<input type="number" id="num" step="0.0001">
+<button id="submit">Submit</button>
+<button id="clear">Clear</button>
+</form>
+<div id="output"></div>
+<a href="main.html">Back to main page</a>
+<script>
+let num = document.getElementById('num');
+let submit = document.getElementById('submit');
+let clear = document.getElementById('clear');
+let output = document.getElementById('output');
+
+submit.addEventListener('click', function() {
+ let number = parseFloat(num.value);
+ if (number.toString().length < 5) {
+ output.innerText = "You need to type a number with at least 4 decimals, please try again";
+ } else {
+ output.innerText = "You typed number " + number + "\nRounded to the nearest integer = " + Math.round(number) + "\nSquare root rounded to integer = " + Math.floor(Math.sqrt(number)) + "\nRounded to the nearest 10th position = " + number.toFixed(1) + "\nRounded to the nearest 100th position = " + number.toFixed(2) + "\nRounded to the nearest 1000th position = " + number.toFixed(3);
+ }
+});
+
+clear.addEventListener('click', function() {
+ num.value = '';
+ output.innerText = '';
+});
+</script>
+<form>
     <a href="https://kayaroo.github.io/hw6p2.html">Part 2</a>
 </form>
   <form>
