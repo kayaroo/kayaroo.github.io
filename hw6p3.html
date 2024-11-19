@@ -26,13 +26,14 @@ name="phoneNumber" placeholder="(999)-999-9999"> <br></br>
 </div>
 
 <script>
-  function validatePhoneNumber(){
-  const phoneNumber=
-  documnet.getElementByld('phoneNumber').
-  value;
-  const output=
-  document.getElementByld('output');
-  const phonePattern = \d{3}-\d{3}-\d{4};
+submit.addEventListener('click', function() {
+ let phoneNumber = phone.value;
+ let pattern = /^\(\d{3}\) \d{3}-\d{4}$/;
+ if (pattern.test(phoneNumber)) {
+ output.innerText = "Thank you for your phone number. You should expect to of our agents in the future.";
+ } else {
+ output.innerText = "Error: Please enter your phone number in the format (999) 999-9999.";
+
 
   if(phonePattern.test(phoneNumber)){
   output.textContent="Thank you for your phone number. You should expect to be contacted by one of our agents in the future.";
