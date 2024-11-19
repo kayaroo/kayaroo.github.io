@@ -28,7 +28,7 @@ name="phoneNumber" placeholder="(999)-999-9999"> <br></br>
 <script>
 submit.addEventListener('click', function() {
  let phoneNumber = phone.value;
- let pattern = /^\(\d{3}\) \d{3}-\d{4}$/;
+ let phoneForm = /^\(\d{3}\) \d{3}-\d{4}$/;
  if (pattern.test(phoneNumber)) {
  output.innerText = "Thank you for your phone number. You should expect to of our agents in the future.";
  } else {
