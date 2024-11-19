@@ -8,33 +8,52 @@
 </head>
 <h1>Homework 6 Part 2</h1>
 
- <form>
-        <textarea id="content" name="content" rows="10" cols="50"></textarea>
-        <input type="text" id="char" name="char" maxlength="1" required>
-        <button type="submit">Submit</button>
-        <button type="reset">Clear</button>
-  </form>
-  <div id="output"></div>
-  
-const contentInput = document.getElementById('content');
-const charInput = document.getElementById('char');
-const outputDiv = document.getElementById('output');
+  <form id="searchForm">
+        <textarea id="content" placeholder="Type your long content here..."></textarea><br>
+        <input type="text" id="charInput" maxlength="1" placeholder="Type a single character">
+        <button type="submit">Search</button>
+    </form>
 
-charInput.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const content = contentInput.value;
-    const char = charInput.value;
-    const count = content.split(char).length - 1;
-    if (count >= 0) {
-        outputDiv.innerText = `The character ${char} appears ${count} times in the content.`;
-    } else {
-        const newWindow = window.open('', '', 'width=300,height=100');
-        newWindow.document.write(`Search character ${char} not found in the content you typed.`);
-        newWindow.document.write(`<button onclick="window.close()">CLOSE</button>`);
-    }
-});
+    <div id="result"></div>
 
+<script>
+        document.getElementById("searchForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
 
+            // Get the values of the content and the character input
+            const content = document.getElementById("content").value;
+            const char = document.getElementById("charInput").value.trim().toLowerCase();
+            const resultDiv = document.getElementById("result");
+
+            // If no character is typed, display an error
+            if (char === "") {
+                resultDiv.textContent = "Please enter a single character to search.";
+                resultDiv.style.color = "red";
+                return;
+            }
+
+            // Search for the character in the content, case insensitive
+            const contentLower = content.toLowerCase();
+            const occurrences = [...contentLower].filter(c => c === char).length;
+
+            if (occurrences > 0) {
+                resultDiv.textContent = `The character "${char}" appears ${occurrences} time(s) in the content.`;
+                resultDiv.style.color = "green";
+            } else {
+                // Open a new window with the error message
+                const errorWindow = window.open("", "ErrorWindow", "width=300,height=100,top=100,left=100");
+                errorWindow.document.write(`
+                    <p style="text-align:center;">Search character "${char}" not found in the content you typed.</p>
+                    <button onclick="window.close()">Close</button>
+                `);
+                // Clear the result area if no match is found
+                resultDiv.textContent = "";
+            }
+
+            // Clear the input field for the character
+            document.getElementById("charInput").value = "";
+        });
+    </script>
 
 <form>
     <a href="https://kayaroo.github.io/hw6p1.html">Part 1</a>
