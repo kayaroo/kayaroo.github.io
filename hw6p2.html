@@ -7,36 +7,31 @@
   </style>
 </head>
 <h1>Homework 6 Part 2</h1>
-<body>
 <form>
-<textarea id="content" rows="5" cols="50"></textarea>
-<input type="text" id="char" maxlength="1">
-<button id="submit">Submit</button>
-</form>
-<div id="output"></div>
-<a href="main.html">Back to main page</a>
-<script>
-let content = document.getElementById('content');
-let char = document.getElementById('char');
-let output = document.getElementById('output');
+        <textarea id="content" name="content" rows="10" cols="50"></textarea>
+        <input type="text" id="char" name="char" maxlength="1" required>
+        <button type="submit">Submit</button>
+    </form>
+  <div id="output"></div>
+const contentInput = document.getElementById('content');
+const charInput = document.getElementById('char');
+const outputDiv = document.getElementById('output');
 
-document.getElementById('submit').addEventListener('click', function() {
- let charValue = char.value.toUpperCase();
- let charCount = 0;
- let contentValue = content.value.toUpperCase();
- for (let i = 0; i < contentValue.length; i++) {
- if (contentValue[i] === charValue) {
- charCount++;
- }
- }
- if (charCount > 0) {
- output.innerText = "Character " + charValue + " found " + charCount + " times";
- } else {
- let windowFeatures = 'width=300,height=100';
- window.open('Search character ' charValue + 'ot found in the content you typed', 'Search Window', windowFeatures);
- }
+charInput.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const char = charInput.value.toUpperCase();
+    const content = contentInput.value.toUpperCase();
+    const charCount = content.split(char).length - 1;
+    if (charCount > 0) {
+        outputDiv.innerText = `Character ${char} found ${charCount} times in the content`;
+    } else {
+        const newWindow = window.open(`Search character ${char} not found in the content you typed`, 'Search Result', `width=300,height=100`);
+        newWindow.addEventListener('close', () => {
+            charInput.value = '';
+        });
+    }
 });
-</script>
+
 
 <form>
     <a href="https://kayaroo.github.io/hw6p1.html">Part 1</a>
