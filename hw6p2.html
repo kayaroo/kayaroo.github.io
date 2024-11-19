@@ -6,8 +6,38 @@
   body{background:#faebd7;}
   </style>
 </head>
+<h1>Homework 6 Part 2</h1>
 <body>
-  <h1>Homework 6 Part 2</h1>
+<form>
+<textarea id="content" rows="5" cols="50"></textarea>
+<input type="text" id="char" maxlength="1">
+<button id="submit">Submit</button>
+</form>
+<div id="output"></div>
+<a href="main.html">Back to main page</a>
+<script>
+let content = document.getElementById('content');
+let char = document.getElementById('char');
+let output = document.getElementById('output');
+
+document.getElementById('submit').addEventListener('click', function() {
+ let charValue = char.value.toUpperCase();
+ let charCount = 0;
+ let contentValue = content.value.toUpperCase();
+ for (let i = 0; i < contentValue.length; i++) {
+ if (contentValue[i] === charValue) {
+ charCount++;
+ }
+ }
+ if (charCount > 0) {
+ output.innerText = "Character " + charValue + " found " + charCount + " times";
+ } else {
+ let windowFeatures = 'width=300,height=100';
+ window.open('Search character ' charValue + 'ot found in the content you typed', 'Search Window', windowFeatures);
+ }
+});
+</script>
+
 <form>
     <a href="https://kayaroo.github.io/hw6p1.html">Part 1</a>
 </form>
