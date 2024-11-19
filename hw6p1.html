@@ -9,27 +9,62 @@
 <h1>Homework 6 Part 1</h1>
 <body>
 
-<form>
-   <input type="text" id="number" name="number" required>
+<h2>Number Calculation Tool</h2>
+
+    <form id="numberForm">
+        <label for="numberInput">Enter a number with at least 4 decimal places:</label><br>
+        <input type="text" id="numberInput" placeholder="e.g., 4.3264"><br><br>
         <button type="submit">Submit</button>
-        <button type="reset">Clear</button>
+        <button type="button" id="clearBtn">Clear</button>
     </form>
-    <div id="output"></div>
-  
-const numberInput = document.getElementById('number');
-const outputDiv = document.getElementById('output');
 
-numberInput.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const number = parseFloat(numberInput.value);
-    if (number.toString().split('.').length - 1 >= 3) {
-        outputDiv.innerText = `You typed number ${number.toFixed(4)}<br>Rounded to the nearest integer = ${Math.round(number)}<br>Square root rounded to integer = ${Math.floor(Math.sqrt(number))}<br>Rounded to the nearest 10th position = ${number.toFixed(1)}<br>Rounded to the nearest 100th position = ${number.toFixed(2)}<br>Rounded to the nearest 1000th position = ${number.toFixed(3)}`;
-    } else {
-        outputDiv.innerText = 'Error: Please enter a number with at least 4 decimals.';
-    }
-});
+    <div id="result"></div>
 
+    <script>
+        document.getElementById("numberForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
 
+            // Get the user input and trim any extra spaces
+            const numberInput = document.getElementById("numberInput").value.trim();
+            const resultDiv = document.getElementById("result");
+
+            // Check if the number has exactly 4 decimal places using a regular expression
+            const regex = /^\d+\.\d{4}$/;
+
+            if (!regex.test(numberInput)) {
+                resultDiv.innerHTML = '<p class="error">You need to type a number with at least 4 decimals, please try again.</p>';
+                return;
+            }
+
+            // Convert the input to a floating-point number
+            const num = parseFloat(numberInput);
+
+            // Perform the required calculations
+            const rounded = Math.round(num);
+            const sqrtRounded = Math.round(Math.sqrt(num));
+            const round10th = num.toFixed(1);
+            const round100th = num.toFixed(2);
+            const round1000th = num.toFixed(3);
+
+            // Display the results in the result div
+            resultDiv.innerHTML = `
+                <p>You typed the number: ${num}</p>
+                <p>Rounded to the nearest integer = ${rounded}</p>
+                <p>Square root rounded to integer = ${sqrtRounded}</p>
+                <p>Rounded to the nearest 10th position = ${round10th}</p>
+                <p>Rounded to the nearest 100th position = ${round100th}</p>
+                <p>Rounded to the nearest 1000th position = ${round1000th}</p>
+            `;
+        });
+
+        // Clear the form and result area
+        document.getElementById("clearBtn").addEventListener("click", function() {
+            document.getElementById("numberInput").value = "";
+            document.getElementById("result").innerHTML = "";
+        });
+    </script>
+
+ 
 <form>
     <a href="https://kayaroo.github.io/hw6p2.html">Part 2</a>
 </form>
