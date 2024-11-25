@@ -25,7 +25,7 @@
 <body>
   <h1>Homework 7 Part 1</h1>
 
-<h2>Style Your Content</h2>
+<h1>Style Your Content</h1>
 
     <main id="style-container" class="content">
         <p>This is the first paragraph. You can style it using the options below.</p>
@@ -74,14 +74,14 @@
         const styleContainer = document.getElementById('style-container');
         const form = document.getElementById('style-form');
 
-        // Event listener for background color change
+        // Event listener for background color change (radio buttons)
         form.querySelectorAll('input[name="background-color"]').forEach(radio => {
             radio.addEventListener('change', function () {
                 styleContainer.style.backgroundColor = this.value;
             });
         });
 
-        // Event listeners for text style checkboxes
+        // Event listeners for text style checkboxes (bold, italic, underline)
         form.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
             checkbox.addEventListener('change', function () {
                 const styleValue = this.value;
@@ -93,11 +93,12 @@
             });
         });
 
-        // Event listener for font size change
+        // Event listener for font size change (dropdown list)
         form.querySelector('select[name="font-size"]').addEventListener('change', function () {
             styleContainer.style.fontSize = this.value;
         });
     </script>
+
 
 <form>
     <a href="https://kayaroo.github.io/hw7.html">Back to Homework 7</a>
