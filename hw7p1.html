@@ -8,6 +8,81 @@
 </head>
 <body>
   <h1>Homework 7 Part 1</h1>
+
+<h2>Style Your Content</h2>
+
+    <main id="style-container" class="content">
+        <p>This is the first paragraph. You can style it using the options below.</p>
+        <p>This is the second paragraph. Change its appearance as you like.</p>
+        <p>This is the third paragraph. Modify the background and text style using the form.</p>
+    </main>
+
+    <form id="style-form">
+        <fieldset>
+            <legend>Background Color</legend>
+            <label>
+                <input type="radio" name="background-color" value="lightblue"> Light Blue
+            </label>
+            <label>
+                <input type="radio" name="background-color" value="lightgreen"> Light Green
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Text Style</legend>
+            <label>
+                <input type="checkbox" name="bold" value="bold"> Bold
+            </label>
+            <label>
+                <input type="checkbox" name="italic" value="italic"> Italic
+            </label>
+            <label>
+                <input type="checkbox" name="underline" value="underline"> Underline
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Font Size</legend>
+            <select name="font-size">
+                <option value="1em">Small</option>
+                <option value="1.5em">Medium</option>
+                <option value="2em">Large</option>
+            </select>
+        </fieldset>
+    </form>
+
+    <a href="homework7.html" class="link-back">Back to Homework 7</a>
+
+    <script>
+        // Grab references to DOM elements
+        const styleContainer = document.getElementById('style-container');
+        const form = document.getElementById('style-form');
+
+        // Event listener for background color change
+        form.querySelectorAll('input[name="background-color"]').forEach(radio => {
+            radio.addEventListener('change', function () {
+                styleContainer.style.backgroundColor = this.value;
+            });
+        });
+
+        // Event listeners for text style checkboxes
+        form.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function () {
+                const styleValue = this.value;
+                if (this.checked) {
+                    styleContainer.style[styleValue] = styleValue;
+                } else {
+                    styleContainer.style[styleValue] = '';
+                }
+            });
+        });
+
+        // Event listener for font size change
+        form.querySelector('select[name="font-size"]').addEventListener('change', function () {
+            styleContainer.style.fontSize = this.value;
+        });
+    </script>
+
 <form>
     <a href="https://kayaroo.github.io/hw7.html">Back to Homework 7</a>
 </form>
