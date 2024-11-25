@@ -8,6 +8,84 @@
 </head>
 <body>
   <h1>Homework 7 Part 2</h1>
+
+  <h2>User Login</h2>
+
+    <div id="welcome-container" class="container">
+        <p id="welcome-message" class="welcome-message"></p>
+    </div>
+
+    <div id="form-container" class="container form-container">
+        <h3>Please enter your details:</h3>
+        <form id="user-form">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" required><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        // Function to get a cookie value by name
+        function getCookie(name) {
+            let decodedCookies = decodeURIComponent(document.cookie);
+            let cookies = decodedCookies.split(';');
+            for (let cookie of cookies) {
+                cookie = cookie.trim();
+                if (cookie.indexOf(name + "=") === 0) {
+                    return cookie.substring(name.length + 1, cookie.length);
+                }
+            }
+            return "";
+        }
+
+        // Function to set a cookie
+        function setCookie(name, value) {
+            document.cookie = name + "=" + value;
+        }
+
+        // Function to delete cookies (when the browser is closed)
+        function deleteCookies() {
+            setCookie("name", "");
+            setCookie("username", "");
+        }
+
+        // Check if cookies for name and username exist
+        let nameCookie = getCookie("name");
+        let usernameCookie = getCookie("username");
+
+        if (nameCookie && usernameCookie) {
+            // If cookies exist, show a welcome message
+            document.getElementById('welcome-message').textContent = "Welcome Back, " + nameCookie + "!";
+            document.getElementById('welcome-container').style.display = "block";
+        } else {
+            // If cookies don't exist, show the form to collect data
+            document.getElementById('form-container').style.display = "block";
+        }
+
+        // Handle the form submission
+        document.getElementById('user-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get the form data
+            let userName = document.getElementById('name').value;
+            let userUsername = document.getElementById('username').value;
+
+            // Set cookies for the name and username
+            setCookie("name", userName);
+            setCookie("username", userUsername);
+
+            // Show a welcome message after saving the cookies
+            document.getElementById('welcome-message').textContent = "Welcome, " + userName + "!";
+            document.getElementById('welcome-container').style.display = "block";
+            document.getElementById('form-container').style.display = "none";
+        });
+
+        // Listen for the page unload event to delete cookies when the browser is closed
+        window.addEventListener('beforeunload', deleteCookies);
+    </script>
+
 <form>
     <a href="https://kayaroo.github.io/hw7.html">Back to Homework 7</a>
 </form>
