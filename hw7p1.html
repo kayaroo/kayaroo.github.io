@@ -4,67 +4,133 @@
   <title>Homework 7 Part 1</title>
   <style>
   body{background:#faebd7;}
-  </style>
-</head>
-<body>
-  <h2>Homework 7 Part 1</h2>
-  <h1>Style Your Content</h1>
-  <main id="style-container" class="content">
-    <p>This is the first paragraph. You can style it using the options below.</p>
-    <p>This is the second paragraph. Change its appearance as you like.</p>
-    <p>This is the third paragraph. Modify the background and text style using the form.</p>
-  </main>
-  <form id="style-form" name="style-form">
-    <fieldset>
-      <legend>Background Color</legend> <label><input type="radio" name="background-color" value="lightblue"> Light Blue</label> <label><input type="radio" name="background-color" value="lightgreen"> Light Green</label>
-    </fieldset>
-    <fieldset>
-      <legend>Text Style</legend> <select name="text-style">
-      </select>
-    </fieldset>
-    <fieldset>
-      <legend>Font Size</legend> <select name="font-size">
-        <option value="1em">
-          Small
-        </option>
-        <option value="1.5em">
-          Medium
-        </option>
-        <option value="2em">
-          Large
-        </option>
-      </select>
-    </fieldset>
-  </form>
-  <script>
-        // Grab references to DOM elements
-        const styleContainer = document.getElementById('style-container');
-        const form = document.getElementById('style-form');
+ </style>
 
-        // Event listener for background color change (radio buttons)
-        form.querySelectorAll('input[name="background-color"]').forEach(radio => {
+ <h2>Interactive Text Styler</h2>
+
+
+    <div>
+        <!-- Form to change styles -->
+        <form id="styleForm">
+            <!-- Background color selection -->
+            <fieldset>
+                <legend>Background Color</legend>
+                <label>
+                    <input type="radio" name="bgColor" value="lightblue"> Light Blue
+                </label>
+                <label>
+                    <input type="radio" name="bgColor" value="lightgreen"> Light Green
+                </label>
+            </fieldset>
+
+
+            <!-- Text style selection -->
+            <fieldset>
+                <legend>Text Style</legend>
+                <label>
+                    <input type="checkbox" id="bold"> Bold
+                </label>
+                <label>
+                    <input type="checkbox" id="italic"> Italic
+                </label>
+                <label>
+                    <input type="checkbox" id="underline"> Underline
+                </label>
+            </fieldset>
+
+
+            <!-- Font size selection -->
+            <fieldset>
+                <legend>Font Size</legend>
+                <select id="fontSize">
+                    <option value="small">Small</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="large">Large</option>
+                </select>
+            </fieldset>
+        </form>
+
+
+        <br>
+
+
+          </div>
+
+
+    <!-- Main area to apply styles -->
+    <main id="styledArea">
+        <p class="styled-text">This is the first paragraph. Style it using the options above.</p>
+        <p class="styled-text">This is the second paragraph. Apply the styles to see the changes.</p>
+        <p class="styled-text">This is the third paragraph. Change the background, text style, and font size!</p>
+    </main>
+
+
+    <script>
+        // Get all the form elements
+        const bgColorRadios = document.querySelectorAll('input[name="bgColor"]');
+        const boldCheckbox = document.getElementById('bold');
+        const italicCheckbox = document.getElementById('italic');
+        const underlineCheckbox = document.getElementById('underline');
+        const fontSizeSelect = document.getElementById('fontSize');
+        const styledArea = document.getElementById('styledArea');
+
+
+        // Function to apply background color based on radio button selection
+        bgColorRadios.forEach(radio => {
             radio.addEventListener('change', function () {
-                styleContainer.style.backgroundColor = this.value;
-            });
-        });
-
-        // Event listeners for text style checkboxes (bold, italic, underline)
-        form.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-            checkbox.addEventListener('change', function () {
-                const styleValue = this.value;
-                if (this.checked) {
-                    styleContainer.style[styleValue] = styleValue;
-                } else {
-                    styleContainer.style[styleValue] = '';
+                const selectedColor = document.querySelector('input[name="bgColor"]:checked')?.value;
+                if (selectedColor) {
+                    styledArea.style.backgroundColor = selectedColor;
                 }
             });
         });
 
-        // Event listener for font size change (dropdown list)
-        form.querySelector('select[name="font-size"]').addEventListener('change', function () {
-            styleContainer.style.fontSize = this.value;
+
+        // Function to update text styles based on checkboxes
+        function updateTextStyles() {
+            // Clear previous styles
+            styledArea.style.fontWeight = '';
+            styledArea.style.fontStyle = '';
+            styledArea.style.textDecoration = '';
+
+
+            // Apply styles based on checkbox selections
+            if (boldCheckbox.checked) {
+                styledArea.style.fontWeight = 'bold';
+            }
+            if (italicCheckbox.checked) {
+                styledArea.style.fontStyle = 'italic';
+            }
+            if (underlineCheckbox.checked) {
+                styledArea.style.textDecoration = 'underline';
+            }
+        }
+
+
+        // Listen for changes on checkboxes to update text styles
+        boldCheckbox.addEventListener('change', updateTextStyles);
+        italicCheckbox.addEventListener('change', updateTextStyles);
+        underlineCheckbox.addEventListener('change', updateTextStyles);
+
+
+        // Function to apply font size based on select option
+        fontSizeSelect.addEventListener('change', function () {
+            const selectedSize = fontSizeSelect.value;
+            if (selectedSize === 'small') {
+                styledArea.style.fontSize = '1rem';
+            } else if (selectedSize === 'medium') {
+                styledArea.style.fontSize = '1.5rem';
+            } else if (selectedSize === 'large') {
+                styledArea.style.fontSize = '2rem';
+            }
         });
-  </script>
+    </script>
+
+
+</body>
+</html>
+
+  
   <form>
     <a href="https://kayaroo.github.io/hw7.html">Back to Homework 7</a>
   </form>
