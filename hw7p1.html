@@ -86,50 +86,6 @@
         });
     </script>
 
-  <label><input type="checkbox" id="boldCheckbox"> Bold</label>
-
-<label><input type="checkbox" id="italicCheckbox"> Italic</label>
-
-<label><input type="checkbox" id="underlineCheckbox"> Underline</label>
-
-<textarea id="textInput"></textarea> 
-
-const boldCheckbox = document.getElementById("boldCheckbox");
-
-const italicCheckbox = document.getElementById("italicCheckbox");
-
-const underlineCheckbox = document.getElementById("underlineCheckbox");
-
-const textInput = document.getElementById("textInput");
-
-
-
-function updateTextFormat() {
-
-  let text = textInput.value;
-
-  
-
-  if (boldCheckbox.checked) text = "<b>" + text + "</b>";
-
-  if (italicCheckbox.checked) text = "<i>" + text + "</i>";
-
-  if (underlineCheckbox.checked) text = "<u>" + text + "</u>";
-
-
-
-  textInput.value = text;
-
-}
-
-
-
-boldCheckbox.addEventListener("change", updateTextFormat);
-
-italicCheckbox.addEventListener("change", updateTextFormat);
-
-underlineCheckbox.addEventListener("change", updateTextFormat);
-
 
 <form>
     <a href="https://kayaroo.github.io/hw7.html">Back to Homework 7</a>
