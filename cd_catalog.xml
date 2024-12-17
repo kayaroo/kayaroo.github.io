@@ -1,4 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>Homework 8</title>
+  <style>
+  body{background:#faebd7;}
+  </style>
+</head>
+<body>
+  <h1>Homework 8</h1>
 <CATALOG>
   <CD>
     <TITLE>Hide your heart</TITLE>
@@ -66,3 +75,8 @@
   </CD>
 </CATALOG>
 
+<form>
+    <a href="https://kayaroo.github.io/">Main Menu</a>
+</form>
+</body>
+</html>
