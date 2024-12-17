@@ -9,8 +9,6 @@ th,td {
   padding: 5px;
 }
 </style>
-  <h1>Homework 8 - AJAX Application</h1>
-
 <body>
 
 <button type="button" onclick="loadDoc()">Get CD collection</button>
@@ -23,7 +21,7 @@ function loadDoc() {
   xhttp.onload = function() {
     myFunction(this);
   }
-  xhttp.open("GET", "cd_catalog.html");
+  xhttp.open("GET", "cd_catalog.xml");
   xhttp.send();
 }
 function myFunction(xml) {
@@ -42,5 +40,3 @@ function myFunction(xml) {
 </script>
 
 </body>
-</html>
-
