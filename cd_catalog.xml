@@ -8,58 +8,74 @@
 </head>
 <body>
   <h1>Homework 8</h1>
+  <?xml version="1.0" encoding="UTF-8"?>
+<CATALOG>
   <CD>
-  <TITLE>Your CD Title</TITLE>
-  <ARTIST>Your Name</ARTIST>
-  <COUNTRY>Your Country</COUNTRY>
-  <COMPANY>Your Company</COMPANY>
-  <PRICE>Your Price</PRICE>
-  <YEAR>2024</YEAR>
-</CD>
+    <TITLE>Hide your heart</TITLE>
+    <ARTIST>Bonnie Tyler</ARTIST>
+    <COUNTRY>UK</COUNTRY>
+    <COMPANY>CBS Records</COMPANY>
+    <PRICE>9.90</PRICE>
+    <YEAR>1988</YEAR>
+  </CD>
+  <CD>
+    <TITLE>Sylvias Mother</TITLE>
+    <ARTIST>Dr.Hook</ARTIST>
+    <COUNTRY>UK</COUNTRY>
+    <COMPANY>CBS</COMPANY>
+    <PRICE>8.10</PRICE>
+    <YEAR>1973</YEAR>
+  </CD>
+  <CD>
+    <TITLE>Maggie May</TITLE>
+    <ARTIST>Rod Stewart</ARTIST>
+    <COUNTRY>UK</COUNTRY>
+    <COMPANY>Pickwick</COMPANY>
+    <PRICE>8.50</PRICE>
+    <YEAR>1990</YEAR>
+  </CD>
+  <CD>
+    <TITLE>The very best of</TITLE>
+    <ARTIST>Cat Stevens</ARTIST>
+    <COUNTRY>UK</COUNTRY>
+    <COMPANY>Island</COMPANY>
+    <PRICE>8.90</PRICE>
+    <YEAR>1990</YEAR>
+  </CD>
+  <CD>
+    <TITLE>Stop</TITLE>
+    <ARTIST>Sam Brown</ARTIST>
+    <COUNTRY>UK</COUNTRY>
+    <COMPANY>A and M</COMPANY>
+    <PRICE>8.90</PRICE>
+    <YEAR>1988</YEAR>
+  </CD>
+  <CD>
+    <TITLE>Bridge of Spies</TITLE>
+    <ARTIST>T'Pau</ARTIST>
+    <COUNTRY>UK</COUNTRY>
+    <COMPANY>Siren</COMPANY>
+    <PRICE>7.90</PRICE>
+    <YEAR>1987</YEAR>
+  </CD>
+  <CD>
+    <TITLE>Red</TITLE>
+    <ARTIST>The Communards</ARTIST>
+    <COUNTRY>UK</COUNTRY>
+    <COMPANY>London</COMPANY>
+    <PRICE>7.80</PRICE>
+    <YEAR>1987</YEAR>
+  </CD>
+  <CD>
+    <TITLE>Unchain my heart</TITLE>
+    <ARTIST>Joe Cocker</ARTIST>
+    <COUNTRY>USA</COUNTRY>
+    <COMPANY>EMI</COMPANY>
+    <PRICE>8.20</PRICE>
+    <YEAR>1987</YEAR>
+  </CD>
+</CATALOG>
 
-<script>
-  function loadXMLData() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        var xmlDoc = this.responseXML;
-        var table = "<table border='1'><tr><th>Title</th><th>Artist</th><th>Country</th><th>Company</th><th>Price</th><th>Year</th></tr>";
-        
-        var cds = xmlDoc.getElementsByTagName("CD");
-        for (var i = 0; i < cds.length; i++) {
-          table += "<tr>";
-          table += "<td>" + cds[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue + "</td>";
-          table += "<td>" + cds[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue + "</td>";
-          table += "<td>" + cds[i].getElementsByTagName("COUNTRY")[0].childNodes[0].nodeValue + "</td>";
-          table += "<td>" + cds[i].getElementsByTagName("COMPANY")[0].childNodes[0].nodeValue + "</td>";
-          table += "<td>" + cds[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue + "</td>";
-          table += "<td>" + cds[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue + "</td>";
-          table += "</tr>";
-        }
-        table += "</table>";
-        document.getElementById("cdTable").innerHTML = table;
-      }
-    };
-    xhttp.open("GET", "catalog.xml", true); // Ensure your XML file name is correct
-    xhttp.send();
-  }
-</script>
-
-<body onload="loadXMLData()">
-  <h1>Homework 8 - AJAX Application</h1>
-
-  <div id="cdTable"></div>
-</body>
-
-<h2>Explanation of AJAX</h2>
-<p>
-  The AJAX code in the script is used to load and display the data from the XML file dynamically. When the page is loaded, the `loadXMLData()` function is triggered. This function sends an HTTP request to fetch the XML file (in this case, "catalog.xml"). Once the XML data is retrieved successfully, the function processes the XML and converts it into an HTML table. The table contains all the CD information, including the new CD entry with your name and the current year.
-</p>
-<p>
-  The AJAX call uses the `XMLHttpRequest` object to communicate with the server without reloading the page. This makes the application more dynamic and user-friendly.
-</p>
-
-<h2>REST API</h2>
 
 <form>
     <a href="https://kayaroo.github.io/hw8EXC.html">Extra Credit</a>
