@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Homework 8 - AJAX Application</h1>
+<a href="homework_1.html">Back to Homework 1</a>
+
+<button type="button" onclick="loadDoc()">Get CD collection</button>
+<br><br>
+<table id="demo"></table>
+
+<script>
+  function loadDoc() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+      myFunction(this);
+    };
+    xhttp.open("GET", "cd_catalog.xml", true);  // Ensure this matches your XML filename
+    xhttp.send();
+  }
+
+  function myFunction(xml) {
+    const xmlDoc = xml.responseXML;
+    const cds = xmlDoc.getElementsByTagName("CD");
+    let table = "<tr><th>Artist</th><th>Title</th></tr>";
+
+    for (let i = 0; i < cds.length; i++) {
+      table += "<tr><td>" +
+        cds[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+        "</td><td>" +
+        cds[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+        "</td></tr>";
+    }
+
+    document.getElementById("demo").innerHTML = table;
+  }
+</script>
+
+<h2>Explanation of AJAX</h2>
+<p>
+  The JavaScript code uses AJAX to load the XML file (`cd_catalog.xml`) dynamically into the webpage. When the user clicks the "Get CD collection" button, the `loadDoc()` function is triggered. This function sends an asynchronous request to the server to fetch the XML file. Once the file is loaded, the `myFunction()` function processes the XML data.
+</p>
+<p>
+  In `myFunction()`, the XML document is parsed, and each `<CD>` element is iterated over to extract the `<ARTIST>` and `<TITLE>` elements. This data is then added to a table, which is displayed on the webpage. The use of AJAX allows the data to be loaded without refreshing the entire page.
+</p>
+
+<h2>REST API</h2>
+<p>
+  For this task, I have chosen the **OpenWeatherMap API**. This API provides weather data, which is useful for applications that require real-time weather information. It's a RESTful service that responds with JSON data, making it easy to integrate with web and mobile apps.
+</p>
+
+<p>
+  The OpenWeatherMap API requires an API key for access. You can sign up for a free API key at [OpenWeatherMap](https://openweathermap.org/appid). With the free tier, you can make up to 60 calls per minute, which is sufficient for most personal projects. Paid plans are available for more extensive usage.
+</p>
+
+<p>
+  The response from the OpenWeatherMap API is in **JSON** format, containing details such as the temperature, humidity, wind speed, and weather description. The API is well-documented, and developers can find usage examples and API references in the official documentation [here](https://openweathermap.org/api).
+</p>
+
+</body>
+</html>
